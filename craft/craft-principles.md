@@ -34,6 +34,16 @@ Never let a character explain the rule aloud. The moment a haunting is
 explicated, it becomes a mechanism, and mechanisms are not frightening — they are
 solvable.
 
+**Withheld is not the same as undecided.** This principle assumes you have written the
+rule down somewhere the reader will never see it. A rule that exists and is concealed
+produces prose thick with consequences that imply a cause; no rule at all produces
+gestures that imply nothing, and the reader feels the difference immediately. The
+symptom is the reader asking *what is actually happening?* - which is never a request
+for exposition, but a report that the pieces do not add up.
+
+State it in one sentence in the story's `notes.md`, under **Rule (off-page)**: what it
+wants, and what it does. If you cannot, do not draft. See `lessons-learned.md` L-008.
+
 ## 4. The haunt must mean something
 
 A ghost that is only a ghost is a jump scare with a longer runway. The apparition
@@ -86,6 +96,25 @@ The worst ending explains. The second worst resolves. Good endings do one of the
 
 End on an image or an action, not a summary and not a moral. Cut the last paragraph
 you wrote; check whether the story is better. It usually is.
+
+### How continuance is executed: price the fear
+
+The three shapes above name endings without saying how to build one. The mechanism for
+the second and third is **cost**. See `lessons-learned.md` L-006 for the full rule.
+
+Give the character a permanent, quantified, trivial inconvenience that she now pays to
+avoid the thing — and never state what she is avoiding. *"She used the kitchen door for
+the rest of the summer, which added eleven steps each way."* The fear is never
+described; the reader sizes it from the price, and sizes it larger than any description
+would have.
+
+Keep the price **small**. Abandoning the house is proportionate to a fright and
+therefore tells the reader nothing. Eleven steps a day forever means she has neither
+fought it nor fled — she has made an arrangement with it, which means it is a permanent
+condition of the place and she knows it.
+
+Withdraw interiority for the last beat. Once the character has stopped having a crisis
+about the haunting, the prose should stop having one too.
 
 ## 8. Point of view
 

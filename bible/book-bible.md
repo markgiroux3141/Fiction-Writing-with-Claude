@@ -78,6 +78,11 @@ Kept current so the collection does not repeat itself.
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | standing-water | III | Reflections | TBD | TBD | TBD | TBD | TBD | not started |
 
+**Filled progressively, not up front (L-015).** Stories are grown from vignettes rather
+than outlined, so a row starts as mostly TBD and is completed as the story acquires its
+shape. An honest TBD beats a guess that then constrains what the story could have
+become. Haunt logic and period land early; ending type and physical band land late.
+
 Fill a row *before* drafting. If a row duplicates another on two or more of
 haunt-logic / ending-type / period / physical, change the story rather than the row.
 `Physical` records how far the story went: `edge` (nothing shown), `threatened`, or

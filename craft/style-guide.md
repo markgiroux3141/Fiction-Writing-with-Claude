@@ -50,11 +50,41 @@ keeps stopping to get a small detail right.
 ## Emotion
 
 **Render, do not name.** The reader should arrive at "she was terrified" without the
-sentence ever appearing. Show the misfired action: she puts the kettle on the cold
-ring. She counts the stairs twice. She says something pleasant to the dog.
+sentence ever appearing.
+
+There are three tiers, and they are used **in this order**, because that is the order
+the body uses. See `lessons-learned.md` L-001.
+
+**1. The involuntary event — required.** What happens without permission, before the
+character understands anything: the body is how she finds out.
+
+Two constraints on how it is written, and they matter more than the choice of event:
+
+- **Coarse, not clinical.** Fear narrows perception; it does not sharpen it. One or
+  two blunt facts, then get her moving. A character who notices individual hairs
+  releasing in sequence is not frightened, she is being examined. (L-001 ceiling.)
+- **Leave the tactile register alone.** Hair rising, skin crawling, prickling,
+  gooseflesh, cold spots — these are the exhausted defaults and no adjective rescues
+  them. Reach instead for **proprioceptive** (how big a part of her feels: *her back
+  had never been so much of her before*), **spatial** (*the hall was nine feet and
+  took a long time*), **cognitive** (the stupid thought that will not drop),
+  **motor** (the latch worked twice; her legs went), or **temporal**. Count the
+  renderings in a passage; if two share a register, move one. (L-007.)
+
+Put the strangeness in the **perception** and keep the **words** plain. No similes
+here — declare the odd fact flatly.
+
+**2. The knowing.** One sentence, flat, arriving *after* the body. Never a paragraph
+of reasoning.
+
+**3. The misfired action.** The aftermath: she puts the kettle on the cold ring, she
+counts the stairs twice, she says something pleasant to the dog. Necessary, but it
+cannot carry the fear alone — behaviour by itself gives the reader a witness's seat.
 
 Banned as a class: "she felt a chill of unease," "a wave of dread washed over him,"
-"his blood ran cold," "an inexplicable sense of foreboding."
+"his blood ran cold," "an inexplicable sense of foreboding." These are banned as
+*compressions and as names*, not because the body is off limits. Tier 1 is the
+opposite of this list, not an exception to it.
 
 ## Dialogue
 

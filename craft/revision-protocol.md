@@ -8,6 +8,22 @@ The loop this repo exists to run.
      └───────────────────────────────────────────────────────────────────────┘
 ```
 
+## 0. Invent
+
+Before any prose. See `invention-protocol.md` for the full method.
+
+1. Write the **Rule (off-page)** - what it wants, what it does. (L-008.)
+2. Note the three events a reader would predict from the setup. Ban them.
+3. Generate **at least twenty** candidate events across **five or more** categories
+   chosen by *who is affected*, with at least three seeded from `reference/period/`.
+4. **Discard the first five unread.**
+5. Score the survivors against the four tests in `invention-protocol.md` Part 1.
+6. **Mark chooses.** Failing that, select by position (8+), never by my ranking - the
+   ranker is as mode-collapsed as the generator. (L-013.)
+7. Check and update the spent-events log, `invention-protocol.md` Part 3.
+
+The invention pass is cheap. The draft is not.
+
 ## 1. Draft
 
 Claude writes `stories/<slug>/draft-01.md` using the craft folder. Frontmatter
