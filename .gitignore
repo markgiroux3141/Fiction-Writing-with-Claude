@@ -1,0 +1,24 @@
+# In-copyright reference material — kept on disk, deliberately not tracked.
+#
+# reference/texts/additional/ holds private reference copies of works still under
+# copyright (Campbell, Leiber, Bradbury, Jackson) plus the PDFs they were extracted
+# from. Reading them locally is fine; committing them puts them in history, where a
+# later `git push` would publish them and a rewrite would be needed to undo it.
+#
+# Harvey's "August Heat" in that folder IS public domain — move it to
+# reference/texts/canon/ if you want it tracked.
+reference/texts/additional/
+
+# OS and editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+*.swp
+.vscode/
+.idea/
+
+# Scratch
+*.tmp
+*.raw
+scratch/
