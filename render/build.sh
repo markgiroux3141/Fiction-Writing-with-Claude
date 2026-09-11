@@ -4,7 +4,7 @@
 #   bash render/build.sh            # edition, then facsimile, then flipbook
 #   bash render/build.sh edition    # clean, selectable, printable
 #   bash render/build.sh facsimile  # the same pages aged into a handled book
-#   bash render/build.sh flip       # the two-page flipbook, from the facsimile
+#   bash render/build.sh flip       # the book bundles the Android app reads
 #
 # Source of truth for the text: manuscript/ if it has anything in it, otherwise
 # the highest-numbered draft in each stories/<nn>-<slug>/ directory. That way
@@ -83,15 +83,52 @@ build_facsimile() {
   local pd; pd="$(paper_dir)"
   local -a pargs=()
   [ -n "$pd" ] && pargs=(--paper-dir "$pd")
+  # 400 dpi, not 200. At 200 the facsimile held 1100 px per page, and a leaf
+  # on the tablet is about 880 device px - so there was 1.2x of real detail
+  # and nothing to magnify. 400 gives 2200 px and 2.5x, which is what makes
+  # a loupe worth having, and it also sharpens ordinary reading because the
+  # page is now supersampled rather than merely matched to the screen.
+  #
+  # Costs: about 3m45s for the book instead of a minute, and a 56 MB pdf
+  # instead of 19 MB. The ink effects in age.py scale with dpi (TUNED_DPI),
+  # so the press still looks like the same press.
+  #
+  # The ceiling above this is the PAPER: cover art/blank pages holds
+  # photographed sheets 1070 px wide, already upscaled 2x at 400 dpi. Going
+  # to 600 would sharpen the type and visibly smear the foxing.
+  # Re-photographing those sheets is what would unlock more.
   python scripts/age.py out/standing-water-edition.pdf \
-      out/standing-water-facsimile.pdf --dpi 200 --age 1.1 \
+      out/standing-water-facsimile.pdf --dpi 400 --age 1.1 \
       "${pargs[@]}" "${@}" || return 1
 }
 
 build_flip() {
   [ -f out/standing-water-facsimile.pdf ] || build_facsimile || return 1
-  echo "== flipbook =="
-  python scripts/build_flip.py out/standing-water-facsimile.pdf ../flip || return 1
+
+  # One bundle per book, and the reader knows nothing else about them.
+  #
+  # Only the facsimile. The clean edition was bundled here for a while to
+  # prove the shelf held more than one book; it is not a book anybody wants
+  # to read, and two cards with the same cover and the same title are a shelf
+  # you have to guess at. Any PDF can be added back as a bundle at any time
+  # without touching this file — see build_bundle.py.
+  echo "== bundles =="
+  python scripts/build_bundle.py out/standing-water-facsimile.pdf ../books \
+      --id standing-water --title "Standing Water" \
+      --subtitle "Of Roots, Reflections, and the Faces Beneath" \
+      --boards "../cover art/cover.png" --width 2200 || return 1
+
+  # Launcher icons for the app. Generated rather than only committed so a
+  # fresh clone can build an apk without a preliminary step.
+  if [ -d ../app/android/app/src/main/res ]; then
+    echo "== icons =="
+    python scripts/build_icons.py --android ../app/android/app/src/main/res \
+      || return 1
+  fi
+
+  echo
+  echo "   Bundles are in books/. Put them on the tablet with:"
+  echo "     launch/Push books.cmd"
 }
 
 case "$TARGET" in

@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath 'com.google.gms:google-services:4.4.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Java version, and why this block exists.
+//
+// Capacitor 8's Android modules declare `sourceCompatibility 21`, so the
+// compiler has to be JDK 21 or newer. The only JDKs on this machine are
+// Temurin 17 and the 25 that ships inside Android Studio — and Gradle 8.14
+// cannot RUN on 25: it fails evaluating settings.gradle with "Unsupported
+// class file major version 69". So 25 is too new for Gradle and 17 is too old
+// for Capacitor, and there is no third JDK to fall back on.
+//
+// AGP 8.13 is perfectly happy on JDK 17, and capacitor-android is plain Java
+// with no 21-only language features in it, so every module is pinned back to
+// 17 and the whole build runs on the system JDK. Installing a real JDK 21
+// would let this block be deleted, and is the better answer the moment
+// Capacitor starts using 21 features — at which point this stops compiling
+// and says so, rather than failing quietly.
+subprojects {
+    afterEvaluate { p ->
+        if (p.extensions.findByName('android') != null) {
+            p.android.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_17
+                targetCompatibility JavaVersion.VERSION_17
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

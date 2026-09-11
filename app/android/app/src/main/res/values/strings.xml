@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- The app is a reader, not a book: it shows whatever bundles are in its
+         own folder on the device, so it must not be named after one of them.
+         The package id still says standingwater and deliberately stays that
+         way - it is invisible except in the path the books live at, and
+         changing it would make Android treat this as a different app and
+         orphan the books already on the tablet. -->
+    <string name="app_name">Facsimile</string>
+    <string name="title_activity_main">Facsimile</string>
+    <string name="package_name">com.standingwater.facsimile</string>
+    <string name="custom_url_scheme">com.standingwater.facsimile</string>
+</resources>

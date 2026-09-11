@@ -1,0 +1,16 @@
+{
+  "name": "standing-water-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android wrapper for the Standing Water facsimile flipbook.",
+  "scripts": {
+    "sync": "cap sync android",
+    "apk": "cd android && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.1",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/cli": "^8.5.1",
+    "@capacitor/core": "^8.5.1"
+  }
+}

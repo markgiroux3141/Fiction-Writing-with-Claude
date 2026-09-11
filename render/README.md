@@ -6,7 +6,7 @@ Turns the drafts into three artifacts from one source.
 |---|---|---|
 | `edition` | `out/standing-water-edition.pdf` | Clean, selectable, printable. Real typography, no texture. |
 | `facsimile` | `out/standing-water-facsimile.pdf` | The same pages aged into a handled book. Raster; text not selectable, which is correct for a scan. |
-| `flip` | `../flip/pages/`, `../flip/pages.js` | Page images for the two-page flipbook. Open `flip/index.html`. |
+| `flip` | `../books/<id>/` | One bundle per book, for the Android app to read. |
 
 ```bash
 bash render/build.sh            # all three
@@ -120,7 +120,11 @@ never reach the page, `---` alone on a line as a scene break, `*italic*`,
 
 The first paragraph of each story and of each scene opens with a two-line drop capital
 and runs its first three or four words on in small capitals, stopping at the first
-comma so the caps never run past a clause.
+comma so the caps never run past a clause. Anything standing before the initial — an
+opening quote, if the scene begins on speech — is set ahead of the drop capital. It
+used to be captured by the regex and then dropped, so a scene opening on dialogue lost
+its quote mark with nothing said; neither story in the book does that yet, which is
+the only reason it was never seen.
 
 ### Encoding
 
@@ -135,6 +139,39 @@ Anything else that writes a file in this pipeline passes `encoding="utf-8"` expl
 for the same reason, and `sources.py` additionally forces LF line endings: it prints
 paths that `build.sh` reads into a shell array with `mapfile`, and CRLF left a carriage
 return on the end of every path, so each one failed to open with *Invalid argument*.
+
+### Quotes
+
+**Write the drafts with straight quotes. `build_tex.py` turns them, and the font must
+never be left to do it.**
+
+The faces are loaded with `Ligatures = TeX`, which switches on XeTeX's `tex-text`
+mapping. That mapping rewrites a lone `"` as U+201D — a *closing* quote — because it
+expects the old TeX input convention of `` `` `` and `''`. Nothing warns. The first
+facsimile printed every quotation in the book opening with a closing mark, and it
+survived a full read of the PDF because a wrong-facing quote looks like old
+typography until you compare it with the mark at the other end of the sentence.
+
+It is not a period convention. An 1898 trade octavo set `“` and `”` distinctly, and so
+did the Fell types two centuries earlier. There are genuine conventions that look
+strange now — an opening quote repeated at the head of every line of a long speech,
+guillemets in French work — but an inverted opening mark is a fault in any century.
+
+`quotes()` in `build_tex.py` decides each mark from its neighbours: a double quote
+opens when what precedes it is nothing, space, an opening bracket or a dash **and**
+what follows is not space, which is what keeps interrupted dialogue (`"I never—"`)
+closing correctly. Single quotes all become apostrophes except one against the inside
+of a double quote, so possessives, `o'clock`, `'em` and `'98` cannot be turned the
+wrong way; genuine nested speech is the one case handled, and it is the one case that
+is unambiguous.
+
+`check_quotes()` warns on stderr — never stdout, which is the TeX — for any paragraph
+with an odd number of quote marks, since that is exactly where the rule had to guess.
+A continued speech that opens a paragraph without closing it would trip this
+legitimately; if the book ever does that, relax the check then rather than now.
+
+If the face is changed, confirm the new one carries U+2018/U+2019/U+201C/U+201D.
+XeLaTeX logs a missing character as a warning and still reports a successful build.
 
 ## Plates
 
@@ -346,10 +383,186 @@ as the rag paper, a faint broad tone, a darkened extreme edge, and a fraction of
 degree of rotation because it was tipped in by hand. No foxing, no fibre, no
 show-through in either direction.
 
-## Flipbook
+## The reader, and the book format
 
-`scripts/build_flip.py` rasterizes the facsimile to screen-resolution JPEGs and writes
-both `pages.json` and `pages.js`.
+`flip/` is a reader, not a book. It knows about **bundles**, and nothing about
+Standing Water in particular.
+
+```
+books/<id>/book.json
+books/<id>/pages/0001.jpg ...
+```
+
+`book.json` is the entire contract:
+
+```json
+{ "schema": 1, "id": "standing-water", "title": "Standing Water",
+  "subtitle": "Of Roots, Reflections, and the Faces Beneath",
+  "pageWidth": 2200, "pageHeight": 3300,
+  "spread": true, "showCover": true,
+  "cover": "pages/0001.jpg", "count": 46, "pages": ["pages/0001.jpg", "..."] }
+```
+
+`spread: false` reads one leaf at a time instead of a two-page spread — right for
+a five-page story, wrong for a bound volume. It is a hand-editable field: flipping it
+in `book.json` and reopening the app is the whole change, no rebuild.
+
+**`id` must be stable across rebuilds.** Last-read position and, later, bookmarks hang
+off it; changing it orphans the reader's place silently.
+
+`scripts/build_bundle.py` makes a bundle from **any** PDF, not only ours:
+
+```bash
+python scripts/build_bundle.py <any.pdf> ../books     --id august-heat --title "August Heat" --subtitle "W. F. Harvey, 1910"
+```
+
+### Books from elsewhere
+
+`build.sh flip` only builds Standing Water, because that is the only book this repo
+writes. Anything else is imported once, by hand, and then simply lives in `books/`.
+The Necronomicon — a different project's facsimile, at
+`D:/Claude Code Projects/Necronomicon/render/out/` — went in with:
+
+```bash
+python scripts/build_bundle.py     "D:/Claude Code Projects/Necronomicon/render/out/necronomicon-facsimile.pdf"     ../books --id necronomicon --title "The Necronomicon"     --subtitle "The Book of the Finishing and the Remainder - Marsh, 1881"     --author "Rev. Josiah Ellwood Marsh, M.A. (ed.)"
+```
+
+188 leaves, 38 MB, twenty seconds. Its first page is a tipped-in plate photographing the
+volume itself, which makes an unusually good shelf thumbnail, and it needs no `--boards`
+because it does not open on one.
+
+**188 pages turned out to be fine, and I had expected it not to be.** The reasoning that
+said a book this long would need lazy loading was wrong: `ImagePageCollection.load()`
+does set `.src` on every image at once, but that only holds the *encoded* JPEG — Chrome
+decodes on draw and evicts under pressure, so the decoded-bitmap arithmetic that
+predicted over a gigabyte never happens. Measured on the tablet with the whole book
+open: 36 MB native heap, 136 MB of GL texture (the canvas, independent of page count),
+a two-second open and clean turns. Lazy loading is still the right answer eventually;
+it is not needed at two hundred pages.
+
+### The loupe
+
+`M`, or the glass in the bar. A brass magnifier follows the finger; the page turns are
+suspended while it is up, because the layer that tracks the finger takes the pointer.
+
+**It magnifies the page image, not the screen.** page-flip's canvas backing store is
+sized in CSS pixels with no device-pixel scaling, so it is *lower* resolution than the
+display — sampling it would have magnified a downsample. The lens is instead a circular
+window onto the page JPEG at 2200 px, positioned so the point under the glass sits at
+the aperture's centre. At 1.75× that works out to 1.43 source pixels per device pixel:
+the magnification is real, not interpolated, which is the whole reason the ageing pass
+moved to 400 dpi.
+
+The artwork is `cover art/magnifying glass short handle.png`, used **whole**. Its lens
+aperture was measured by flood-filling the alpha channel from the border — whatever
+transparent pixels are left enclosed *are* the aperture — giving centre (49.94%, 28.17%)
+and radius 42.42% of the width. Those numbers are in `app.js`, and the CSS
+`transform-origin` must match them or the glass rotates off its own lens.
+
+Three things that had to be got right, each of which looked like a different bug:
+
+- **The glass is sized by its lens, not by its width.** The first artwork was 39% lens
+  by width and this one is 85%; sizing by width made the second one taller than the
+  screen. The aperture is what the reader looks through, so that is the dimension that
+  is held constant (250 px) when the artwork changes.
+- **The artwork is never cropped.** The long-handled version was cropped to keep it on
+  screen, which cut through the middle of the handle — and the straight cut edge read
+  exactly like the glass being clipped by the display.
+- **The box is square and centred on the lens**, sized to twice the distance from the
+  lens centre to the furthest corner of the artwork. Rotating the handle south-east
+  swings the image outside a box cut to the artwork's own proportions, and the
+  `filter` on that box clips to its region.
+
+The handle hangs south-east and the finger grips near its end, so the lens rides up and
+to the left of the hand — a magnifier held any other way has your own knuckles in it.
+One consequence of the geometry: the lens centre cannot go above about 145 px from the
+top of the screen without the brass rim leaving it, which on this trim is the running
+head and the folio.
+
+### Resolution, and the chain of ceilings
+
+Every rasterization in the pipeline is a ceiling, and for a long time two of them were
+set too low:
+
+```
+drafts  →  edition.pdf      vector, lossless
+        →  facsimile.pdf    age.py --dpi 400   → 2200 px per page
+        →  bundle           build_bundle --width 2200 (dpi derived) → 2200 px
+        →  screen           ~880 device px per leaf on the Tab S10 Lite
+```
+
+That leaves **2.5× of real detail** above what the screen shows — which is what a
+magnifier can draw on, and it also makes ordinary reading sharper, because the page is
+now supersampled rather than merely matched.
+
+Two bugs were in the way. `age.py` ran at 200 dpi, giving 1100 px per page against 880
+device px: 1.2× headroom, nothing to magnify. And `build_bundle.py` hardcoded **150 dpi**
+and then resized *up* to the target width — on a 5.5-inch page that is 825 px stretched
+to 1100, so every page in every bundle carried a third fewer pixels than it claimed.
+Upscaling also injects interpolation noise that JPEG spends bytes on, so the pages were
+softer *and* larger: fixing it made the Necronomicon 25% more pixels for 40% fewer bytes.
+`build_bundle.py` now derives the dpi from the trim and never resamples.
+
+Measured cost of 400 dpi, on the device, with the whole book open:
+
+| | 200 dpi / 1100 px | 400 dpi / 2200 px |
+|---|---|---|
+| facsimile PDF | 19 MB | 56 MB |
+| ageing pass | ~1 min | 3 min 45 s |
+| bundle | 12.9 MB | 37.2 MB |
+| open the book | — | 426 ms |
+| page turn | 908 ms (850 ms is the animation) | 908 ms — unchanged |
+| native heap | 34 MB | 34 MB — unchanged |
+| GL texture | 136 MB | 207 MB |
+
+**The next ceiling is the paper, not the type.** `cover art/blank pages` holds two
+photographed sheets 1070 px wide, and `paper_scan.py` resizes them to the page — so at
+400 dpi the paper is already upscaled 2×. Going to 600 would sharpen the type and
+visibly smear the foxing. Re-photographing those sheets is what would unlock more, not
+a higher `--dpi`.
+
+**The ink effects scale with dpi now.** They are measured in pixels and were tuned at
+200, so without scaling the bite of the type and the show-through would tighten as the
+resolution rose and a 400 dpi facsimile would stop looking like the same press. See
+`TUNED_DPI` in `age.py`.
+
+### Why the PDF is not read directly
+
+It could be, and it should not be. The ageing pass rasterizes every page to a 200 dpi
+image and wraps it in PDF, so a PDF engine in the app would parse a container, decode a
+print-resolution raster, and hand back exactly the JPEG a bundle ships anyway — at three
+times the pixels a tablet leaf can show, plus the engine's memory. Preprocessing is
+strictly cheaper. It also keeps a PDF engine out of the app, so adding pdf.js later for
+drop-in PDFs is a pure addition that converts to the same bundle format and rewrites
+nothing.
+
+### Where books live
+
+Nothing is bundled into the APK. Every book is found at runtime in the app's own folder
+on the device:
+
+```
+/sdcard/Android/data/com.standingwater.facsimile/files/books/<id>/
+```
+
+That directory needs **no storage permission**, is visible over USB and in My Files, and
+is created on first run so there is always a real folder to drop a book into. The shelf
+is simply whatever is in it: add a book by copying a directory, remove one by deleting
+it. No rebuild, no reinstall.
+
+```
+launch\Push books.cmd            everything in books/
+launch\Push books.cmd <id>       just that one
+```
+
+**The package id still says `standingwater`, deliberately.** It is invisible except in
+that path, and changing it would make Android treat this as a different app — orphaning
+every book already on the tablet.
+
+**A reinstall empties the shelf.** `Android/data/<pkg>/` is app data, and replacing the
+app clears it; the app then comes up saying *No books yet* and the books look lost rather
+than deleted. `Build and install app.cmd` therefore pushes the library again on every
+install rather than leaving it as a step to remember.
 
 **The front board is page one of the PDF.** A book cannot really contain a photograph of
 itself; this one does it anyway, because it is the fastest way to know which book you
@@ -379,14 +592,89 @@ at this scale is a fine weave, and a weave is cheaper to generate than to rescue
 **The book has no half-title and no frontispiece.** It opens on its title page, because
 the flipbook puts the boards in front of that and a half-title between a cover and a
 title page is a leaf the reader turns past without reading. Both were removed together,
-which keeps the count even and the title page on a recto. `flip/index.html` reads `pages.js` via `<script src>`
-rather than fetching the JSON, because `fetch()` of a local file is blocked by CORS
-under `file://` — so the flipbook opens by double-clicking it, with no server.
+which keeps the count even and the title page on a recto.
 
 The viewer is [page-flip](https://github.com/Nodlik/StPageFlip) (MIT), vendored at
 `flip/vendor/`. It draws leaf shadows but not the gutter — the trough between the two
 leaves belongs to the binding rather than to either page — so `index.html` overlays
 one, and fades it out while a leaf is in motion.
+
+**It is patched.** page-flip's `clear()` filled its whole canvas white on every frame,
+so any part of the stage no leaf covered came out as a slab of bright white paper — most
+visibly beside the closed front board, which is the first thing anyone sees. It now
+clears transparent, so the page ground shows through and a closed book sits on the table
+it is on. The patch is one method, noted in a comment at the top of the vendored file,
+and has to be reapplied if the vendor copy is ever updated.
+
+**Sizing is page-flip's, not ours.** The viewer used to measure the viewport once at
+load and build a `size: 'fixed'` book from it, so rotating a tablet or restoring the
+window left the book at the old trim. It is now `size: 'stretch'` with `autoSize`, which
+keeps the aspect with a percentage padding and rebinds itself on resize; CSS caps the
+stage against the window's height as well as its width.
+
+`?book=<id>` opens straight into one book and `#p=12` lands on a leaf — for checking a
+single spread without walking the shelf to reach it.
+
+**The book fills the height, and the controls float.** Reserving flow space for the bar
+cost 104 px of book on every screen in order to show three buttons that a swipe makes
+optional anyway, so the bar is now a `position: fixed` pill over the foot of the page
+that withdraws after about four seconds and returns on any touch, move, key or page
+turn. The overlay is `pointer-events: none` except the buttons themselves — otherwise it
+swallowed drags on the bottom corners of the page, which is exactly where a reader grabs
+a leaf. A spread is 4:3 and a tablet is 16:10, so filling the height means margins at
+the sides; that trade is the point. `I` toggles an inset view that stands the book on
+visible ground instead, `B` hides the controls for good, `F` is fullscreen.
+
+### The Android app
+
+`app/` is a Capacitor project that wraps `flip/` — the reader, and nothing else — into
+a real APK, served from `https://localhost`, Capacitor's internal origin. It needs no
+cable, no server and no network, ever. 4.1 MB, because the books are not in it.
+
+**There is no browser version.** The reader was briefly a PWA as well; that route is
+gone, along with its service worker, web manifest and web icons. It could only ever
+show books bundled into the page, since a browser cannot read the device's filesystem,
+which is exactly the limitation the app does not have.
+
+```
+launch\Build and install app.cmd          build, then install over USB
+launch\Build and install app.cmd build    build only
+```
+
+Verified on a Galaxy Tab S10 Lite (Android 16): launches on the closed front board,
+fullscreen with no system bars, 46 pages from the APK, and `serviceWorkers: 0` — the
+viewer detects `window.Capacitor` and skips registering its worker, because caching
+assets that are already local just makes a second copy that can go stale against the
+first.
+
+Two things the wrapper needed beyond `cap add android`:
+
+- **Immersive mode in `MainActivity.java`.** Android 15+ force apps edge-to-edge and
+  ignore the old fullscreen flags, so the bars come off through
+  `WindowInsetsControllerCompat`, with `BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE` — a page
+  turn *is* an edge swipe, and a reader who summoned the navigation bar every time they
+  turned a leaf would stop turning leaves. Re-hidden on every focus gain.
+- **Java.** Capacitor 8's Gradle plugin needs a JDK newer than 21 and the system JDK
+  here is 17, so the build script points `JAVA_HOME` at the JDK that ships inside
+  Android Studio rather than asking anyone to install a second one.
+
+**The `Books` native plugin.** `BooksPlugin.java` lists the bundles in the app's own
+external folder and returns each manifest plus its absolute path; the web side turns
+that path into a loadable URL with `Capacitor.convertFileSrc`, so page images stay
+ordinary `<img src>` streamed natively — no base64, no second copy of the book in
+memory. Sixty lines of plain Java instead of `@capacitor/filesystem`, which is a much
+larger dependency for three operations and which declares a Kotlin `jvmToolchain(21)` —
+a hard requirement for a JDK that is not installed here. See the Java note in
+`app/android/build.gradle`.
+
+**Where the reader keeps its place.** `localStorage`, keyed by bundle id, holding the
+last spread per book; the shelf card shows it as *at 12*. Named bookmarks are not built
+yet — that is the next piece, and it belongs in the same record.
+
+`launch\Build and install app.cmd` calls `gradlew.bat` by absolute path on purpose: this
+machine has `NoDefaultCurrentDirectoryInExePath=1`, under which cmd will not find a
+batch file sitting in the current directory, and the build dies claiming gradlew is not
+a recognised command.
 
 ## Requirements
 
@@ -422,3 +710,7 @@ Nothing below blocks the pipeline; all of it changes what the book looks like.
    plate in `plates.json`.
 6. **The cover.** `cover art/cover.png` is not in the build at all yet. The flipbook
    currently opens on the half-title; a real closed book opens on boards.
+7. **A quote against a drop capital.** A scene opening on dialogue now sets its `“`
+   ahead of the initial, which is correct and plain. The finer setting hangs it in the
+   margin so the capital stays flush with the measure. Nothing in the book triggers it
+   yet — the first story to open on speech will.

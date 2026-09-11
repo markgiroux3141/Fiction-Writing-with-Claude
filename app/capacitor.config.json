@@ -1,0 +1,10 @@
+{
+  "appId": "com.standingwater.facsimile",
+  "appName": "Facsimile",
+  "webDir": "../flip",
+  "backgroundColor": "#14120f",
+  "android": {
+    "backgroundColor": "#14120f",
+    "webContentsDebuggingEnabled": true
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The page ground from flip/index.html, so the native window and the
+         web page are the same dark and no seam shows at the edges. -->
+    <color name="ground">#14120F</color>
+
+    <color name="colorPrimary">#14120F</color>
+    <color name="colorPrimaryDark">#14120F</color>
+    <color name="colorAccent">#B9AC93</color>
+</resources>

@@ -1,152 +1,55 @@
-<!doctype html>
-<html lang="en">
-<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Standing Water — facsimile</title>
-<style>
-  :root {
-    --ground: #14120f;
-    --ground-2: #241f19;
-    --ink: #b9ac93;
-    --ink-dim: #6d6353;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    background:
-      radial-gradient(ellipse 90% 70% at 50% 42%, var(--ground-2) 0%, var(--ground) 72%);
-    color: var(--ink);
-    font: 13px/1.5 "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    overflow: hidden;
-    user-select: none;
-  }
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#14120f">
+<!-- An empty data: icon. The WebView asks for /favicon.ico on every load
+     and logs a 404 when there is none, which is invisible in a fullscreen
+     app and pure noise in the console the next bug gets debugged in. -->
+<link rel="icon" href="data:,">
+<title>Facsimile</title>
+<link rel="stylesheet" href="app.css">
 
-  /* The stage sizes the book; page-flip is told to stretch into it. */
-  #stage { position: relative; }
-  #book { box-shadow: 0 40px 90px rgba(0,0,0,.75); }
-
-  /* page-flip draws its own leaf shadows; this is the gutter — the trough
-     between the two leaves, which no page-turn library draws because it
-     belongs to the binding rather than to either page. */
-  #gutter {
-    position: absolute; top: 0; bottom: 0; left: 50%;
-    width: 76px; margin-left: -38px;
-    pointer-events: none; z-index: 40;
-    background: linear-gradient(90deg,
-      rgba(0,0,0,0) 0%, rgba(0,0,0,.20) 34%, rgba(0,0,0,.42) 48%,
-      rgba(0,0,0,.42) 52%, rgba(0,0,0,.20) 66%, rgba(0,0,0,0) 100%);
-    opacity: .85;
-    transition: opacity .25s;
-  }
-  #stage.turning #gutter { opacity: 0; }
-
-  #bar {
-    margin-top: 18px; display: flex; gap: 18px; align-items: center;
-    letter-spacing: .16em; text-transform: uppercase; font-size: 10px;
-    color: var(--ink-dim);
-  }
-  #bar button {
-    background: none; border: 1px solid var(--ink-dim); color: var(--ink);
-    padding: 5px 13px; letter-spacing: .16em; text-transform: uppercase;
-    font: inherit; cursor: pointer; border-radius: 1px;
-  }
-  #bar button:hover { border-color: var(--ink); }
-  #bar button:disabled { opacity: .3; cursor: default; }
-  #folio { min-width: 9em; text-align: center; }
-
-  #missing {
-    max-width: 34em; text-align: center; line-height: 1.7;
-    color: var(--ink-dim);
-  }
-  #missing code { color: var(--ink); }
-</style>
-</head>
-<body>
-
-<div id="stage" hidden>
-  <div id="book"></div>
-  <div id="gutter"></div>
+<!-- The shelf. Every book is found at runtime in the app's own folder on the
+     device; nothing is bundled into the apk. -->
+<div class="view" id="shelf">
+  <header>
+    <h1>Facsimile</h1>
+    <p class="sub">a shelf of facsimiles</p>
+  </header>
+  <div id="books"></div>
 </div>
 
-<div id="bar" hidden>
-  <button id="prev">&larr;</button>
-  <span id="folio"></span>
-  <button id="next">&rarr;</button>
+<!-- The reader. One book at a time; the stage is rebuilt on each open,
+     because page-flip's destroy() removes its own container. -->
+<div class="view" id="reader">
+  <div id="stage">
+    <div id="book"></div>
+    <div id="gutter"></div>
+  </div>
 </div>
 
-<p id="missing" hidden>
-  No pages yet. Build them with<br><br>
-  <code>bash render/build.sh flip</code>
-</p>
+<!-- The loupe. The layer swallows pointer events while it is up, so a page
+     cannot turn under the glass; the lens is a circular window onto the page
+     image at full resolution, and the glass itself sits over it. -->
+<div id="loupeLayer">
+  <div id="loupe">
+    <div id="loupeLens"><img id="loupeImg" alt=""></div>
+    <img id="loupeGlass" src="glass.png" alt="">
+  </div>
+</div>
+
+<div id="chrome">
+  <div id="bar">
+    <button id="shelfBtn" title="Back to the shelf (Esc)">Shelf</button>
+    <button id="prev">&larr;</button>
+    <span id="folio"></span>
+    <button id="next">&rarr;</button>
+    <button id="glassBtn" title="Magnifier (M)">&#9906;</button>
+    <button id="full" title="Fullscreen (F)">&#9974;</button>
+  </div>
+  <p id="hint">swipe, or drag a corner &nbsp;&middot;&nbsp; I inset &nbsp;&middot;&nbsp; F fullscreen &nbsp;&middot;&nbsp; B hides this</p>
+</div>
+
+<div id="opening">opening</div>
 
 <script src="vendor/page-flip.browser.js"></script>
-<script src="pages.js"></script>
-<script>
-(function () {
-  const book = window.BOOK;
-  if (!book || !book.count) {
-    document.getElementById('missing').hidden = false;
-    return;
-  }
-
-  const stage  = document.getElementById('stage');
-  const bar    = document.getElementById('bar');
-  const folio  = document.getElementById('folio');
-  stage.hidden = false;
-  bar.hidden   = false;
-
-  // Fit two leaves plus margins into the viewport, preserving the trim.
-  const ratio = book.height / book.width;
-  const avail_h = window.innerHeight - 120;
-  const avail_w = window.innerWidth  - 80;
-  let leaf_w = Math.min(avail_w / 2, avail_h / ratio);
-  leaf_w = Math.max(240, Math.min(leaf_w, 620));
-  const leaf_h = Math.round(leaf_w * ratio);
-
-  const flip = new St.PageFlip(document.getElementById('book'), {
-    width: Math.round(leaf_w),
-    height: leaf_h,
-    size: 'fixed',
-    showCover: true,          // the first leaf stands alone, as a closed book does
-    usePortrait: false,       // always a two-page spread
-    drawShadow: true,
-    maxShadowOpacity: 0.6,
-    flippingTime: 850,
-    mobileScrollSupport: false,
-    swipeDistance: 20
-  });
-
-  flip.loadFromImages(book.pages);
-
-  document.getElementById('gutter').style.height = leaf_h + 'px';
-
-  function label() {
-    const i = flip.getCurrentPageIndex();      // 0-based, left leaf of spread
-    const n = book.count;
-    folio.textContent = (i === 0)
-      ? 'cover'
-      : (i + 1 >= n ? `${i + 1} of ${n}` : `${i + 1}–${i + 2} of ${n}`);
-    document.getElementById('prev').disabled = i <= 0;
-    document.getElementById('next').disabled = i + 2 >= n;
-  }
-
-  flip.on('flip', label);
-  flip.on('changeState', e => {
-    stage.classList.toggle('turning', e.data !== 'read');
-  });
-  label();
-
-  document.getElementById('prev').onclick = () => flip.flipPrev();
-  document.getElementById('next').onclick = () => flip.flipNext();
-  window.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft')  flip.flipPrev();
-    if (e.key === 'ArrowRight') flip.flipNext();
-  });
-})();
-</script>
-</body>
-</html>
+<script src="app.js"></script>

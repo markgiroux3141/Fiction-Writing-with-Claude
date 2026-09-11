@@ -100,8 +100,17 @@ def age_plate_page(png, seed, **_):
 FADE = 0.5
 
 
+# The ink effects below were tuned at 200 dpi and are measured in PIXELS, so
+# without this they shrink relative to the page as the resolution rises: the
+# bite of the type gets tighter, the show-through gets sharper, and a 400 dpi
+# facsimile stops looking like the same press. Everything is scaled against
+# the resolution it was judged at.
+TUNED_DPI = 200
+
+
 def age_page(png, seed, prev_ink=None, gutter="left", age=1.0,
-             sheets=(), leaf=0, verso=False, fade=FADE):
+             sheets=(), leaf=0, verso=False, fade=FADE, dpi=TUNED_DPI):
+    k = dpi / float(TUNED_DPI)
     src = Image.open(png)
     w, h = src.size
     shape = (h, w)
@@ -123,10 +132,11 @@ def age_page(png, seed, prev_ink=None, gutter="left", age=1.0,
     ink = np.clip(ink * starve, 0, 1)
 
     # --- bite: type presses out into damp paper ---------------------------
+    bite = max(3, int(round(3 * k)) | 1)   # MaxFilter needs an odd kernel
     spread = np.asarray(
         Image.fromarray((ink * 255).astype(np.uint8), "L")
-        .filter(ImageFilter.MaxFilter(3))
-        .filter(ImageFilter.GaussianBlur(0.55)), dtype=np.float32) / 255.0
+        .filter(ImageFilter.MaxFilter(bite))
+        .filter(ImageFilter.GaussianBlur(0.55 * k)), dtype=np.float32) / 255.0
     ink = np.clip(np.maximum(ink, spread * 0.55), 0, 1)
 
     # a little grit so edges are never mathematically clean
@@ -145,7 +155,7 @@ def age_page(png, seed, prev_ink=None, gutter="left", age=1.0,
     if prev_ink is not None and prev_ink.shape == shape:
         through = np.asarray(
             Image.fromarray((prev_ink[:, ::-1] * 255).astype(np.uint8), "L")
-            .filter(ImageFilter.GaussianBlur(1.6)), dtype=np.float32) / 255.0
+            .filter(ImageFilter.GaussianBlur(1.6 * k)), dtype=np.float32) / 255.0
         sheet -= (through * 15.0)[:, :, None] * np.array([0.55, 0.75, 1.0])
 
     # --- lay the ink down --------------------------------------------------
@@ -232,7 +242,8 @@ def main():
                 img, prev = age_page(p, seed=1000 + i, prev_ink=prev,
                                      gutter=gutter, age=args.age,
                                      sheets=sheets, leaf=n0 // 2,
-                                     verso=bool(n0 % 2), fade=args.fade)
+                                     verso=bool(n0 % 2), fade=args.fade,
+                                     dpi=args.dpi)
                 label = "aged page"
             leaf = Path(tmp) / f"aged-{i:04d}.jpg"
             # The dpi tag matters: img2pdf sizes each page from the image's own
