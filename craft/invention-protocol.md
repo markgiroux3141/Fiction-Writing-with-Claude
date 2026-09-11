@@ -88,6 +88,23 @@ the list gets wide and the selection narrows it back to the middle. So:
 
 ### Generation rules
 
+**Format first: candidates are rendered, not specified (L-023).** A candidate is a
+paragraph of 60-140 words in which something happens or is described, and which does
+something to a reader who comes to it cold. Not a plot fact. The test at this stage is not
+whether the idea obeys anything but whether **anything happens to you when you read it**,
+and a one-line specification cannot be tested that way — it only works on a reader already
+inside a world that does not exist yet. `craft/vignette-bank.md` is the format of record.
+Machinery — period, trade, paperwork, wound, the rule off-page — is **derived after
+something lands**, never proposed instead of it.
+
+**0. Generate unfiltered (L-022).** No rule in `craft/` applies at this stage. Do not
+screen a candidate against a prohibition, a prescription, a test, or this document's own
+Part 3 — every one of them describes finished prose or a finished story, and there is
+neither here. Write the candidate you would not defend. Filtering happens at **selection**,
+where it is Mark's, and at **draft**, where the prohibitions come on and cost nothing to
+obey. A candidate list that has been pre-screened is not a wide list; it is my taste with
+the working shown.
+
 1. **Twenty minimum.** Not five. The interesting territory starts where the obvious
    runs out, which in practice is somewhere past item eight.
 2. **Discard the first five unread.** Treat them as the modal band. If one of them is
@@ -122,19 +139,33 @@ the real work.** My self-diversification is a helpful prior, not a control.
 
 ---
 
-## Part 3 — Spent events
+## Part 3 — The repetition register
 
 Mode collapse across the collection is a larger risk than within any one story: twelve
-stories will drift toward three haunt logics unless the drift is recorded. Log every
-event as it is used. Nothing here may be reused, and no new event may be a near
-neighbour of one on the list.
+stories will drift toward three haunt logics unless the drift is recorded. Log every event
+as it is used.
+
+**This is a register, not a blacklist (L-022).** It has no force at the generation stage
+and it does not kill candidates at selection. What it does is make repetition *visible* so
+that the question can be asked out loud: **would the story this grows into be a different
+story?** That is a judgment about two stories rather than two one-line events, and it is
+Mark's to make. Re-using an event outright is still almost always wrong; a near neighbour
+is a question.
+
+**And an event is spent; a register is not.** A single logged event does not burn the
+family of ideas around it. The clearest violation of that — a whole wear-and-pressure
+family declared dead off one unscored vignette — is written up under L-022 as the model of
+the error.
 
 | Event | Where | Status |
 |---|---|---|
+| Children sickening one by one after it has been near them | story 01 | spent |
+| A body laid out with the arms straight out to the sides | story 01 | spent |
+| A dying child leaving the bed to play, and going behind a tree | story 01 (ending) | spent |
 | Certainty of a watcher at the top of the stairs | vignette A1 | spent |
 | An extra place at a table, eaten from | vignette B1 | spent |
 | A dropped object put back into the hand | vignette D1 | spent |
-| A stranger joining a children's game and not stopping | vignette I1 | spent |
+| A tall figure among children at play; six in the field, five at the table | vignette I1 → **story 01** | **promoted** |
 | Root-matter growing through a face, trimmed as routine | vignette G1 | spent |
 | Wear on a chair and floor from a body that never moved | vignette F1 | spent |
 | A ledger entry in the writer's own hand that he did not make | vignette C1 | spent |
@@ -147,6 +178,8 @@ neighbour of one on the list.
 | The bed held steady through a malarial chill; the quinine poured away | batch 03 (Fable) #4 | spent |
 | A third dress on the line, worn through where the owner's are | batch 03 (Fable) #5 | spent |
 | A widow measuring longer at each mourning fitting; waterlogged feet | batch 03 (Fable) #6 | spent |
+| A monument nobody can date, and one person immune to the parish's avoidance of it | **story 03** | **in use** |
+| A body found at the figure with its hand up; the hat set down first | **story 03** | **in use** |
 
 ---
 
@@ -204,14 +237,19 @@ better output.** See L-014. Two standing counterweights:
 
 `revision-protocol.md` begins at **Draft**. This runs before it:
 
-**0. Invent.**
-   a. Write the **Rule (off-page)** — what it wants, what it does. (L-008.)
-   b. Note the three events a reader would predict. Ban them.
-   c. Generate ≥20 candidates across ≥5 who-is-affected categories, ≥3 seeded from
-      `reference/period/`.
-   d. Discard the first five.
-   e. Score survivors against the four tests.
-   f. **Mark chooses**, or select by position from 8+.
-   g. Check `Part 3 — Spent events`. Log the choice.
+**0. Invent.** Stages a-d take no rules at all (L-022); the filtering is e onward.
+   a. Note the three events a reader would predict, and **list them rather than ban them**
+      — naming the obvious is the whole anti-collapse mechanism, and burning it only costs
+      candidates.
+   b. Generate ≥20 candidates across ≥5 who-is-affected categories, ≥3 seeded from
+      `reference/period/`. Unfiltered. Include the ones I would not defend.
+   c. Discard the first five as the modal band — **logged, not deleted**, and available if
+      Mark overrides.
+   d. Note collisions with Part 3 **as flags on candidates that stay on the list.**
+   e. **Mark chooses**, or draw with `craft/tools/pick.py`.
+   f. *Then* write the **Rule (off-page)** for the chosen candidate — what it wants, what it
+      does (L-008) — and score it against the four tests. Both are decisions about a story,
+      and there is no story until something is picked.
+   g. Log the choice and its seed in Part 3.
 
 Only then draft. The invention pass is cheap and the draft is not.

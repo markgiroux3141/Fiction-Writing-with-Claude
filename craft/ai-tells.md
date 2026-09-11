@@ -143,11 +143,50 @@ would have surprised the person who wrote the rules. Cure: ration the prescripti
 rules* in `lessons-learned.md`), and log deviations in `craft/deviations.md` when they
 earn their place. Do not schedule them. (L-014.)
 
+**The uncannily calm protagonist (added 2026-09-08, L-019).** A character who has seen
+the impossible and then goes back to her chores at the pace the plot requires. It is the
+easiest tell in the book to write without noticing, because every craft doc here praises
+restraint, flatness and accommodation — and all three are instruments for *after* a
+character has fought and lost, not substitutes for the fight.
+
+Symptoms: the reader asks *why is she still sitting there* rather than *what is out
+there*; nobody in the story ever does the obvious thing; the household's reaction to a
+death is proportionate but its reaction to the impossible is not; the protagonist never
+looks unreasonable to anyone else.
+
+Cure: make her do it — go at it, shout, keep the children in, fetch the husband and the
+gun, write the letter — and then have the **ordinary world** close each option: the
+period's medicine, the neighbours' certainty, the cost to her standing. Never let the
+haunting be what stops her; a thing that forecloses options has acquired rules (L-016).
+Ask of every scene after the first strangeness: **what did she try since we last saw
+her, and who talked her out of it?**
+
+**The protected protagonist (added 2026-09-09, L-021).** The plot arranges the
+point-of-view character's innocence. She tries the right thing and is refused; the
+refusal always comes from outside her; the harm that follows is nobody's fault. It is
+the hardest tell in this file to see, because it is not a decision made badly — it is a
+default written from, and eleven rounds of critique did not surface it in story 01.
+
+Symptoms: an option closed by a letter, a relative, a doctor's absence or an answer that
+is *"the only answer there was"*, where the closure happens to give her what she wants;
+the story's nastiest thought about her arriving with an excuse already attached; no
+sentence anywhere that a reader could hold against her.
+
+Cure: ask **whose interest each closed option serves.** Foreclosure from outside is what
+makes a fighting character credible (L-019); the same device applied to something she
+wants is an alibi. Then implicate her in the register a court cannot touch — omission,
+delay, a true letter shaped to get an answer, a name not said — and never let the
+complicity total itself up.
+
 ## F. Modal events
 
 The event-level equivalent of the banned phrases in §A: the haunting a model reaches
-for when nobody has decided what happens. Banned by default; usable only if the
-`invention-protocol.md` four tests are argued explicitly.
+for when nobody has decided what happens.
+
+**Stage note (L-022).** This list has **no force at the invention stage** — there it is a
+list to notice, and naming the obvious is what stops it being the default answer. It bites
+at **selection**, as a flag, and at **draft**, where using one needs the four tests argued
+explicitly. Do not use it to strike candidates off a pool.
 
 - the corpse that is warm, or has shifted slightly
 - the figure standing at the foot of the bed
@@ -186,9 +225,27 @@ Before any draft is handed over:
 9. At each moment of fear, does the body go first? If the character knows before she
    feels, or if the only rendering is behaviour, the passage is under-rendered.
    (L-001.)
+9b. **Run `craft/tools/reference-sweep.py` — never check pronouns by reading.**
+    `python craft/tools/reference-sweep.py <draft> --pov <Name> --thing <noun>`, per
+    movement, and judge every flagged row rather than skimming. See
+    `revision-protocol.md` step 1a for why it is a script. Extract each pronoun with the
+    named referents of its own gender that precede it, and judge the rows **in isolation**,
+    without the paragraph's meaning in front of you. Reading for sense cannot find these,
+    because the writer resolves a pronoun against intent and the reader resolves it against
+    the last available noun. Two syntactic checks need no judgment at all and caught most of
+    the faults in story 03: **a possessive is not an antecedent** (*Elmire's brother* leaves
+    a later bare *she* with nothing to attach to), and **a section break resets anchoring**
+    (name the subject in the first sentence after white space). Sweep in reverse order so
+    narrative momentum cannot supply a referent. Highest-yield place to look: anything
+    converted from first person, where the original *I* needed no antecedent. (L-005.)
 10. Re-read anything that feels merely *odd* rather than wrong. It is almost always
     bookkeeping: a referent to decode, an argument never made, or a contradiction left
     hanging. (L-003 / L-004 / L-005.)
+    **And re-read the seams of every cut made this round**, naming the referent of each
+    pronoun and deictic in the two sentences that now abut. Deleted material does
+    anchoring work that is invisible once it is gone (L-005, story 01).
+12. Does any sentence after an impossible fact exist to make that fact hold up? Cut it.
+    The event does not need a lawyer. (L-018.)
 11. Was the central event *chosen*? Score it against the four tests in
     `invention-protocol.md` and check it against §F. An unchosen event cannot be
     rescued by good prose. (L-012.)

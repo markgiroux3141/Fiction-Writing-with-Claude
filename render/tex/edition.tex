@@ -1,0 +1,54 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{tex/preamble}
+
+\begin{document}
+\frontmatter
+\pagestyle{empty}
+
+% The boards are page one. A book cannot really contain a photograph of
+% itself, and this one does it anyway: it is the fastest way to know which
+% book you have opened, and the facsimile is the object people look at.
+\coverleaf{cover.jpg}
+
+% The half-title and the frontispiece are deliberately absent. The book opens
+% on its title page: the flipbook puts the boards in front of that, and a
+% half-title leaf between a cover and a title page is a leaf the reader turns
+% past without reading. Removing both keeps the page count even, so the title
+% page still falls on a recto.
+
+% ---------------------------------------------------------------- title page
+\null\vspace*{0.35in}
+\begin{center}
+  {\Large\ls{11.0}{\MakeUppercase{Standing Water}}}\\[1.5\baselineskip]
+  {\footnotesize\itshape or}\\[0.9\baselineskip]
+  {\ls{5.0}{\MakeUppercase{Of Roots, Reflections}}}\\[0.5\baselineskip]
+  {\ls{5.0}{\MakeUppercase{and the Faces Beneath}}}\\[2.4\baselineskip]
+
+  \rule{0.20\textwidth}{0.4pt}\\[2.6\baselineskip]
+
+  \begin{minipage}{0.84\textwidth}\centering\footnotesize
+  With \caps{Twelve Plates} from photographs
+  \end{minipage}\\[3.4\baselineskip]
+\end{center}
+\vfill
+\begin{center}
+  {\ls{5.0}{\MakeUppercase{New Orleans}}}\\[0.4\baselineskip]
+  {\footnotesize\itshape Printed for the publishers}\\[0.4\baselineskip]
+  {\footnotesize MDCCCXCVIII}
+\end{center}
+\vspace*{0.35in}
+
+\clearpage
+\thispagestyle{empty}
+\null\vfill
+\begin{center}\begin{minipage}{0.70\textwidth}\centering\footnotesize
+The plates in this volume are reproduced from the originals, which are not
+all of them accounted for.
+\end{minipage}\end{center}
+\vfill\null
+
+% ---------------------------------------------------------------- the stories
+\mainmatter
+\input{out/body}
+
+\end{document}

@@ -43,7 +43,7 @@ stories/<nn>-<slug>/    draft-NN.md, critique-NN.md, notes.md
 manuscript/             stories promoted to final, assembled in reading order
 reference/              influences, research
 cover art/              cover.png
-wet plate photographs/  the five plates
+wet plate photographs/  the photographs, named by subject (see bible/plate-inventory.md)
 ```
 
 ## Rules of the loop
@@ -62,6 +62,12 @@ wet plate photographs/  the five plates
   drafting, so the collection does not accumulate three stories with the same shape.
 - **Run the pre-flight checklist** (`craft/ai-tells.md` §E) before handing over any
   draft. Report honestly if something fails it.
+- **Sweep the references before handing over any movement.**
+  `python craft/tools/reference-sweep.py <draft> --pov <Name> --thing <noun>`
+  (`craft/tools/`, wired in at `revision-protocol.md` step 1a). Nineteen unclear
+  pronouns got through four careful readings of story 03; a pronoun is resolved by the
+  writer against intent and by the reader against the nearest noun, so this one cannot
+  be done by reading and is not optional.
 - **Feedback beats doctrine.** If Mark contradicts a craft document, Mark is right
   and the document gets edited the same day.
 - **Effect beats rule.** If breaking a prescription makes the passage better, break it,

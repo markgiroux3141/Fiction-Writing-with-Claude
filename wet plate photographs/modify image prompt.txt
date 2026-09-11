@@ -1,0 +1,32 @@
+improve this wet plate photography image to remove A.I. artifacts and inaccuracies, but keep the old degraded photograph aesthetic. It should look like a real unsettling horror image take in in the late 19th century. There should be visible scratches on the surface of the image, places where it's faded. It should look worn from 100 years of use and fingers folding and touching it. If there are objects or entities that indicate motion, there should be parts that are out of focus, blurry from motion etc. Think of how a slow shutter camera from 100 years ago would behave. Make the image faded and low contrast.
+
+
+
+Convert this image into a wet plate collodion photograph from the 1860s, preserving the existing subject, pose, and composition. 
+
+Optics: reduce depth of field drastically, as a large-format brass Petzval lens wide open — a single thin plane of focus, everything in front of and behind it falling off into soft, illegible form. Background dissolves into a featureless field. Smeared, swirling softness toward the frame edges, with heavy natural vignetting and dim, soft corners. 
+
+Emulsion: orthochromatic response. Skin renders dark and heavy; blemishes and freckles go nearly black; light eyes render pale and almost blank; reds go dark; any sky or bright background blows to blank white with no gradation. Tonality: low contrast and low microcontrast. Shadows collapse to flat grey-black with no recoverable detail. Highlights shoulder off into milky silver-white. No sharpening, no clarity, no HDR, no shadow lift, no even illumination. 
+Surface: render this as a photograph of a physical plate, not a digital image. Hand-poured collodion streaks and pour ridges along one edge, teardrop-shaped comet trails, a thumbprint near the border, bare unemulsified patches, pinholes, varnish crazing, chemical staining, and silvering. Irregular hand-cut edges; the plate is slightly bowed and catches light unevenly. Warm grey-brown metallic tone, no true black. 
+
+Artifacts should be clustered, directional, and asymmetric — not uniform grain. 
+
+Let anything in motion smear as it would during a long exposure.
+
+
+
+
+
+
+
+Convert this image into a wet plate collodion photograph from the 1860s. Keep the subject, pose, and composition. Keep the image sharp and finely resolved — this was made with the lens stopped down, so detail holds across the entire frame, edge to edge, including the background. Do not blur or soften anything.
+
+Tonality: compress the range severely. Blacks lift to a flat mid-grey with no true black anywhere; highlights compress into a narrow band of milky silver-white. Overall low contrast, veiled and slightly foggy in the tonal sense only — the veiling comes from light scattering inside an uncoated brass lens, so it lifts the shadows without reducing sharpness. Shadow areas hold their edges but lose all separation between tones. No HDR, no punchy contrast, no deep saturated blacks.
+
+Color response: orthochromatic. Skin renders dark and heavy; blemishes and freckles nearly black; light eyes pale and blank; reds and yellows go dark; any sky or bright area clips to blank paper white with no gradation.
+
+Light: single directional source, steep and from above. Unmodified, so the falloff is abrupt — but the shadow side retains fine detail, just crushed into a narrow grey range.
+
+Surface: this is a photograph of a physical plate. Hand-poured collodion streaks and a thicker ridge along one edge, teardrop comet trails, a thumbprint near the border, bare unemulsified patches, pinholes, varnish crazing, chemical staining, and silvering at the edges. Irregular hand-cut edges. Warm grey-brown metallic tone. Defects clustered, directional, and asymmetric — never uniform grain.
+
+Sharp, detailed, flat, and chemically aged.

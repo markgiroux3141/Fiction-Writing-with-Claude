@@ -70,13 +70,41 @@ spent precisely and late, in the vegetal register the plates suggest rather than
 visceral one. See `craft/craft-principles.md` §11 for how the budget works across the
 collection.
 
+## What the book's own register turned out to be
+
+Added 2026-09-10 from an independent cold read of story 03, and it is a collection-level
+finding rather than a note about that story:
+
+> "The real originality here isn't the statue - a hostile thing a community manages by
+> refusing to name it is well-trodden ground, Jackson especially. What's yours is the
+> maintenance. The whitewash twice a year, too much sand in the mortar in 1890-whenever,
+> lime cracking on her wrists, the mortar going off in the pan and putting her half an hour
+> behind. **The horror is administered by women with brushes, on a schedule, forever.**"
+
+Two consequences worth holding across the remaining stories:
+
+- **The premise is not the differentiator; the labour is.** Jackson is the neighbour of the
+  unnamed-thing-a-community-manages premise, and the book cannot win on premise. It can win
+  on the work - what the job actually is, who does it, what it costs in time and in mortar
+  and in half-hours. Story 01 has this too (the wash, the laying-out, the cane) and neither
+  story planned it.
+- **This is D-005 arriving as an asset instead of a constraint.** D-005 says period is a
+  register and specification earns its place by doing work in the scene. The labour is where
+  specification always does work, and it is the one register the collection has that is not
+  available to a writer who has not decided what these people do all day.
+
+Do not turn this into a requirement. It is where to look when a story is inert, not a quota.
+
 ## Story ledger
 
 Kept current so the collection does not repeat itself.
 
 | # | Slug | Plate | Section | Haunt logic | Ending type | POV | Period | Physical | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | standing-water | III | Reflections | TBD | TBD | TBD | TBD | TBD | not started |
+| 1 | the-game | I | The Faces Beneath | Something is out there with the children; the ones it is near sicken | recontextualization | close third | 1878 | explicit (late, vegetal) | **final, 5,143 w** |
+| 3 | ti-jean · *The Long Way Round* | the-attitude-of-grief | The Faces Beneath | A figure in a burying ground that nobody can date and everybody walks a little faster past; one young man is not affected by it | door left open | close third | 1905 | edge of frame (no body; two facts) | **final, 4,262 w** |
+| - | georgie | TBD | TBD | A killer keeps a head in the house and names it | TBD | TBD | TBD | TBD | event pool built, not started |
+| - | standing-water | the-wrong-reflection | Reflections | TBD | TBD | TBD | TBD | TBD | not started |
 
 **Filled progressively, not up front (L-015).** Stories are grown from vignettes rather
 than outlined, so a row starts as mostly TBD and is completed as the story acquires its

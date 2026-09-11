@@ -1,0 +1,29 @@
+{
+  "_photos_root": "D:/Mark Backup/wet plate photography/enhanced",
+  "01-the-game": {
+    "src": "cover art/the tall one (inset).png",
+    "file": "plate-01.jpg",
+    "process": "as_is",
+    "inset": 0.015,
+    "numeral": "I",
+    "caption": "",
+    "where": "before",
+    "full_bleed": true
+  },
+  "03-ti-jean": {
+    "src": "cover art/angel (inset).png",
+    "file": "plate-03.jpg",
+    "process": "as_is",
+    "inset": 0.015,
+    "numeral": "II",
+    "caption": "",
+    "where": "before",
+    "full_bleed": true
+  },
+  "_cover": {
+    "src": "cover art/cover.png",
+    "file": "cover.jpg",
+    "process": "as_is",
+    "inset": 0.0
+  }
+}

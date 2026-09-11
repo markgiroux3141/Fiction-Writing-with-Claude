@@ -25,14 +25,25 @@ as frightening; it is a cartoon. Fear needs a stable floor to crack.
 
 ## 3. The haunt has rules — and you never state them
 
-The ghost must operate by a consistent internal logic that the reader can *almost*
-infer. It appears in still water but not running water. It cannot cross the porch
-line. It only takes what is offered. The reader should finish the story able to
-half-articulate the rule, and be wrong in an interesting way.
+The rule exists to keep **me** consistent, not to give the reader something to
+reconstruct. One sentence about appetite — what it wants, what it does — and that is the
+whole of it.
+
+**Amended 2026-09-08 (L-016).** This section previously asked for "a consistent internal
+logic the reader can *almost* infer" and said "the reader should finish the story able
+to half-articulate the rule." That instruction is withdrawn. It is what produced eight
+candidates for story 01 built on rule sets, score-keeping and household arithmetic, and
+Mark's verdict was that all of them were overthinking: *"A horror story doesn't need
+this level of internal consistency and plot coherency. This isn't a mystery novel where
+you solve a mystery and in the end all the pieces come together."*
+
+A rule that the reader is *invited* to infer is a puzzle, and a puzzle is a mechanism
+arriving by the back door. Keep the off-page rule thin enough that there is nothing to
+solve.
 
 Never let a character explain the rule aloud. The moment a haunting is
 explicated, it becomes a mechanism, and mechanisms are not frightening — they are
-solvable.
+solvable. **The same is true of a haunting that is merely *inferable*.**
 
 **Withheld is not the same as undecided.** This principle assumes you have written the
 rule down somewhere the reader will never see it. A rule that exists and is concealed
@@ -44,16 +55,32 @@ for exposition, but a report that the pieces do not add up.
 State it in one sentence in the story's `notes.md`, under **Rule (off-page)**: what it
 wants, and what it does. If you cannot, do not draft. See `lessons-learned.md` L-008.
 
-## 4. The haunt must mean something
+## 4. The haunt must have an effect — not a meaning
 
-A ghost that is only a ghost is a jump scare with a longer runway. The apparition
-should be the shape of something the living character will not look at directly:
-grief, guilt, complicity, inheritance, a debt, a thing done to someone poor by
-someone comfortable. The supernatural is the return of what was buried — literally
-and otherwise.
+**Rewritten 2026-09-08. See D-004 and L-016.** This section used to say the apparition
+"should be the shape of something the living character will not look at directly:
+grief, guilt, complicity, inheritance, a debt." That is repealed. Mark: *"there isn't an
+explanation of what the thing is and that's where the horror lies. It's unexplanable
+enough to be supernatural, and it has an effect."*
 
-Test: if you removed the ghost, would there still be a wound? If no, the story is
-hollow.
+A thing that is the shape of grief **is** an explanation, and the reader who works it
+out has solved the story. The old test — *remove the ghost, is there still a wound?* —
+was a machine for generating theses, and every one of the four wounds I offered Mark for
+story 01 was rejected on exactly that ground.
+
+What replaces it:
+
+- **The thing means nothing and does something.** Nothing in the story accounts for it.
+  Something measurable is different because of it — a body, a habit, a household.
+- **The wound is what it costs, not what it stands for.** Fill `wound` in the front
+  matter with the cost. If what you have written could be paraphrased as *the story is
+  about X*, it is a thesis and it goes.
+- **This does not license the hollow.** L-008 still holds: I know the one-sentence rule
+  and never write it down. Unexplained-with-no-effect is not mystery, it is gesture, and
+  the reader reports it as *what is actually happening?*
+
+Test: **could a reader finish this and answer "what was it" in a line?** If yes, there
+is an explanation in the story whether or not a character stated one.
 
 ## 5. Dread is structural, not adjectival
 
@@ -78,8 +105,22 @@ A reliable three-beat spine:
 2. **Intrude.** The wrongness enters the character's safe space and cannot be
    explained. The character begins to accommodate it — which is the true horror:
    people adapt.
+   **Precondition, added 2026-09-08 (L-019): the adaptation must be bought.** She first
+   does what a real person would do, loudly and more than once, and is beaten — by the
+   period, the household, the neighbours, the cost to her standing. **Never by the
+   thing**; a haunting that forecloses her options has acquired a rule and a reach
+   (L-016). Adaptation without a fight is passivity, and passivity reads as the author
+   needing the character to stay put.
 3. **Implicate.** The character discovers they are not a witness but a participant.
    They were always part of it. The haunting was addressed to them.
+   **The direction test, added 2026-09-09 (L-021).** Implication is not the same as being
+   *chosen*, and the second is the easier and weaker of the two to write. Go through every
+   option the plot closes on the character and ask **whose interest the closure serves.**
+   Where it protects her from the story's own worst thought about her, it is an alibi:
+   remove it and let her be complicit in the register a court would not touch — what she
+   omitted, delayed, allowed, or wrote truthfully to get the answer she wanted. Do not
+   then let the complicity add up; a consistent chain of guilt is a diagram (L-016), and
+   she must never be given the sentence in which she understands what she has done.
 
 The turn from witness to participant is where most ghost stories live or die.
 
@@ -89,6 +130,19 @@ The worst ending explains. The second worst resolves. Good endings do one of the
 
 - **Recontextualization.** A final detail makes the reader re-read the whole story
   in their head. Not a twist — a *key*. It should have been visible all along.
+
+  **How it is executed: relocate a banked image.** See `lessons-learned.md` L-017,
+  added 2026-09-08. Bank a plain, specific description of the thing early, where it
+  reads as scenery. Report the consequences in summary. Then let that same description
+  come true of a person, in the flattest short sentence in the story, noticed by the POV
+  character and explained by nobody. The ending delivers no new fact — it moves an old
+  one, which is why it cannot be solved.
+
+  Mark's exemplar: *The Thing*, in **Scary Stories to Tell in the Dark**. Boys see a
+  creature; it takes one of them by the arm; he sickens; the story ends *"in the end, he
+  looked just like the creature."* The transferable move is the **relocation**, not the
+  resemblance — a posture, a rate of movement, a colour, a silence, a habit. Read as
+  *the victim becomes the monster* it will be a formula inside three stories.
 - **The door left open.** The threat is not defeated, merely postponed, and the
   character now lives inside the arrangement.
 - **The quiet horror of continuance.** Life goes on, altered. The last image is
@@ -154,9 +208,15 @@ How to spend well:
   that is specific and correct.
 - **Late and once.** Place the explicit image after the reader has been made to
   wait for it. A story that opens physical has nowhere to go.
-- **Keep the prose calm.** The sentence delivering the worst thing should be the
-  flattest sentence in the story. Horror rises out of the gap between what is being
-  described and how evenly it is described.
+- **Keep the prose calm — but not before the reader has registered it.** The sentence
+  delivering the worst thing should be the flattest in the story. Horror rises out of the
+  gap between what is being described and how evenly it is described.
+  **Ordering requirement, added 2026-09-08 (L-018).** Calm is what a character sounds
+  like *after* an event has happened to her. Reach for it too early and the flatness
+  reads as the event being elided rather than absorbed — which is what story 01's draft
+  did with a laid-out child's arms. Mid-story: involuntary body, then the knowing, then
+  the misfired action, then the natural explanation dying where the reader can watch it.
+  Then flat. The full withdrawal belongs to the last beat only.
 - **Vegetal before visceral.** The plates point at roots, fibre, waterlogged tissue,
   growth through the body rather than injury to it. That register is this book's
   own; blood and wounds are generic. When in doubt, make it grow.

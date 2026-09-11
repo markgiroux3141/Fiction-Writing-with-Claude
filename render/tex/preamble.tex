@@ -1,0 +1,236 @@
+% ---------------------------------------------------------------------------
+% Standing Water — an illustrated collection, published 1898.
+%
+% Typographic premise: an American trade octavo of the late 1890s, illustrated
+% with mounted photographic plates. NOT an antiquarian private press — the
+% Necronomicon pipeline this is grown from is set in the Fell types, which are
+% 1680s and Oxford, and would be two centuries and an ocean wrong here.
+%
+% Body face: Old Standard (OFL), a digitisation of the "modern" face that set
+% most English-language books between about 1860 and 1930. It has no true
+% small capitals and no bold in the period sense, which suits: emphasis in a
+% book of 1898 is italic, and headings are letterspaced capitals.
+% ---------------------------------------------------------------------------
+
+\usepackage{fontspec}
+\usepackage[
+  paperwidth=5.5in, paperheight=8.25in,
+  inner=0.78in, outer=0.95in, top=0.80in, bottom=1.05in,
+  headsep=14pt, footskip=26pt
+]{geometry}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{needspace}
+\usepackage{eso-pic}
+\graphicspath{{plates/}}
+
+% Relative, so the repo can move. The build runs xelatex with cwd = render/.
+\def\fontdir{fonts/}
+
+% The body face is chosen by tex/face.tex, which scripts/set_face.py writes
+% from tex/faces/<name>.tex. Without one the default below applies. Faces
+% differ in more than shape: some have real small capitals and some do not,
+% so each face file also says which \caps to use.
+\InputIfFileExists{tex/face}{}{%
+  \setmainfont{OldStandard-Regular.ttf}[
+    Path = \fontdir , ItalicFont = OldStandard-Italic.ttf ,
+    BoldFont = OldStandard-Bold.ttf , Ligatures = TeX ]}
+
+% ------------------------------------------------------------------ measure
+\linespread{1.16}
+\setlength{\parindent}{1.15em}
+\frenchspacing
+\raggedbottom
+\clubpenalty=8000
+\widowpenalty=8000
+
+% ------------------------------------------------------------ letterspacing
+% microtype's \textls needs pdfTeX or LuaTeX; under XeTeX the letterspacing
+% has to come from the font engine, which fontspec exposes as LetterSpace.
+\newcommand{\ls}[2]{{\addfontfeature{LetterSpace=#1}#2}}
+
+% Small capitals. Some of the candidate faces have a real cut (IM Fell, Sorts
+% Mill Goudy) and some have none at all (Old Standard, Libre Caslon), so both
+% are defined here and each face file says which one it gets. The synthesised
+% version is uppercase at 82% of the current size, letterspaced — what a
+% photo-set fake has always done, and adequate at the sizes used here.
+\newlength{\capsize}
+\makeatletter
+% \f@size is a bare number, not a dimen, so it cannot be scaled in place:
+% 0.82\f@size expands to "0.8210.95" and TeX reports an illegal unit. It has
+% to go through a length register first.
+\newcommand{\fakecaps}[1]{%
+  {\addfontfeature{LetterSpace=6.0}%
+   \setlength{\capsize}{\f@size pt}%
+   \setlength{\capsize}{0.82\capsize}%
+   \fontsize{\capsize}{\f@baselineskip}\selectfont
+   \MakeUppercase{#1}}}
+\newcommand{\realcaps}[1]{{\addfontfeature{LetterSpace=4.0}\scshape #1}}
+\makeatother
+% Faces with a real small-capitals cut override this in tex/faces/<name>.tex.
+\let\caps\fakecaps
+
+% ------------------------------------------------------------------ story head
+% Each story opens on a fresh recto, sunk about an inch, title in letterspaced
+% capitals over a short rule. \storyend clears to the next recto and leaves the
+% verso blank, which is how a collection of this period sets its stories.
+\newcommand{\storyhead}[1]{%
+  \cleardoublepage
+  \thispagestyle{storyopen}%
+  \null\vspace*{0.55in}%
+  \begin{center}
+    {\large\ls{9.0}{\MakeUppercase{#1}}}\par\vspace{0.55\baselineskip}
+    \rule{0.16\textwidth}{0.4pt}
+  \end{center}
+  \vspace{1.05\baselineskip}%
+  \markboth{Standing Water}{#1}%
+  \pagestyle{fancy}%
+  \noindent\ignorespaces}
+
+\newcommand{\storyend}{\cleardoublepage}
+
+% A scene break: a little air and a short centred rule. Not three asterisks —
+% that is a modern typescript convention, not a printed one.
+\makeatletter
+\newcommand{\scenebreak}{%
+  \par\addvspace{0.9\baselineskip}%
+  \needspace{3\baselineskip}%
+  \noindent\hfill\rule{0.10\textwidth}{0.4pt}\hfill\null\par
+  \addvspace{0.9\baselineskip}%
+  \@afterindentfalse\@afterheading}
+\makeatother
+
+% ------------------------------------------------------------------ drop cap
+\setcounter{DefaultLines}{2}
+\renewcommand{\LettrineFontHook}{\normalfont}
+% lettrine sets its run-in text in small capitals by default; the text face
+% has none, so the run-in is left plain and \caps does the work instead.
+\renewcommand{\LettrineTextFont}{\normalfont}
+\setlength{\DefaultFindent}{2pt}
+\setlength{\DefaultNindent}{0pt}
+
+% ---------------------------------------------------------- blank versos
+% \cleardoublepage inserts a blank verso but does not clear its page style, so
+% the blank inherits the running head of the story just ended — which then
+% appears after that story is over. Blanks must be truly blank.
+\makeatletter
+\renewcommand*{\cleardoublepage}{%
+  \clearpage
+  \if@twoside
+    \ifodd\c@page\else
+      \null\thispagestyle{empty}\newpage
+    \fi
+  \fi}
+\makeatother
+
+% ------------------------------------------------------------- running heads
+% Folio in the outer corner of the head, running title centred: the standard
+% arrangement for an illustrated trade octavo of the nineties. Nothing at the
+% foot, so a plate leaf reads as blank paper below the caption.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE]{{\footnotesize\thepage}}
+\fancyhead[RO]{{\footnotesize\thepage}}
+\fancyhead[CE]{{\footnotesize\ls{5.0}{\MakeUppercase{\leftmark}}}}
+\fancyhead[CO]{{\footnotesize\ls{5.0}{\MakeUppercase{\rightmark}}}}
+
+\fancypagestyle{storyopen}{%
+  \fancyhf{}\renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{{\footnotesize\thepage}}}
+
+% -------------------------------------------------------------- front matter
+\newcommand{\fmhead}[1]{%
+  \cleardoublepage
+  \thispagestyle{storyopen}%
+  \null\vspace*{0.45in}%
+  \begin{center}
+    {\ls{8.0}{\MakeUppercase{#1}}}\par\vspace{0.45\baselineskip}
+    \rule{0.14\textwidth}{0.4pt}
+  \end{center}
+  \vspace{1.0\baselineskip}%
+  \markboth{#1}{#1}}
+
+% ------------------------------------------------------------------- plates
+% A mounted plate: its own leaf, no folio, no running head, printed one side
+% only — so the blank verso that follows is correct rather than wasteful. The
+% caption sits below in small type, the plate numeral run in at its head.
+%
+% The ageing pass finds these pages by detecting colour: the text is black on
+% white, a plate is a warm-toned photograph. Nothing here records page numbers.
+%
+% The height cap is load-bearing, not taste. The plate, its caption and the
+% fill above and below have to fit one 	extheight. At 0.80 they did not:
+% the box spilled onto the following recto, and the story — which opens with
+% \cleardoublepage — was pushed a further leaf on and no longer faced its
+% plate. If the plate is ever enlarged again, check that a story still opens
+% on the recto opposite it.
+%
+%   \plate{file}{numeral}{caption}
+%
+% A plate is tipped in FACING the story it belongs to, which means it prints on
+% a verso: land on a recto, leave that recto blank (the back of the inserted
+% leaf), print the plate on the verso, and the story then opens on the recto
+% opposite. Placing it on a recto instead — the obvious reading of "its own
+% leaf" — puts a blank page between the photograph and the story it is of.
+\newcommand{\plate}[3]{%
+  \cleardoublepage
+  \null\thispagestyle{empty}\clearpage
+  \thispagestyle{empty}%
+  \null\vfill
+  \begin{center}
+    \includegraphics[width=1.30\textwidth,height=0.72\textheight,keepaspectratio]{#1}%
+    \platecaption{#2}{#3}%
+  \end{center}
+  \vfill\null
+  \clearpage}
+
+\newcommand{\platecaption}[2]{%
+  \par\vspace{1.1\baselineskip}
+  \begin{minipage}{0.88\textwidth}\footnotesize\centering
+    \ls{4.0}{\MakeUppercase{Plate #1}}\par\vspace{0.35\baselineskip}
+    \RaggedRight #2
+  \end{minipage}}
+
+% The frontispiece is the exception: it faces the title page, so it prints on
+% the verso immediately after the half-title, with no inserted blank and no
+% caption — an empty \plate would otherwise set the word PLATE above nothing.
+\newcommand{\frontispieceplate}[1]{%
+  \clearpage
+  \thispagestyle{empty}%
+  \null\vfill
+  \begin{center}
+    \includegraphics[width=0.92\textwidth,height=0.78\textheight,keepaspectratio]{#1}%
+  \end{center}
+  \vfill\null
+  \clearpage}
+
+% ------------------------------------------------------- full-bleed plate
+% A leaf that IS the photograph: printed to the trim, no margin, no folio, no
+% caption. The source is already a finished leaf — a print on its own mount,
+% photographed — so setting it inside the text measure would paste one sheet
+% of paper onto another, and the join shows as a rectangle.
+%
+% eso-pic paints it into the page background, which is the only reliable way
+% to reach outside the type area under twoside, where the margin an \hspace
+% would have to cancel differs between recto and verso.
+%
+%   \platefull{file}
+\newcommand{\platefull}[1]{%
+  \cleardoublepage
+  \null\thispagestyle{empty}\clearpage   % blank recto: the back of the leaf
+  \thispagestyle{empty}%
+  \AddToShipoutPictureBG*{%
+    \put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{#1}}}%
+  \null\clearpage}
+
+% The boards, as the first leaf, with no blank in front of them.
+\newcommand{\coverleaf}[1]{%
+  \thispagestyle{empty}%
+  \AddToShipoutPictureBG*{%
+    \put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{#1}}}%
+  \null\clearpage
+  \null\thispagestyle{empty}\clearpage}   % the inside of the board
