@@ -627,6 +627,21 @@ visible ground instead, `B` hides the controls for good, `F` is fullscreen.
 
 ### The Android app
 
+**From a fresh clone**, once: `app/node_modules/` is not tracked, so Capacitor's CLI has
+to be fetched before anything can sync.
+
+```bash
+cd app && npm ci        # or npm install
+```
+
+Then the ordinary loop, from the repo root:
+
+```bash
+bash render/build.sh                    # edition -> facsimile -> bundles
+launch\Build and install app.cmd        # apk, install, and re-push the books
+```
+
+
 `app/` is a Capacitor project that wraps `flip/` — the reader, and nothing else — into
 a real APK, served from `https://localhost`, Capacitor's internal origin. It needs no
 cable, no server and no network, ever. 4.1 MB, because the books are not in it.
