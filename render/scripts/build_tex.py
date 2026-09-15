@@ -67,10 +67,39 @@ def esc(s):
     return "".join(TEX_ESCAPE.get(c, c) for c in s)
 
 
+# ------------------------------------------------------------------- quotes
+# The drafts are written with straight quotes and the book must print curly
+# ones, so the conversion happens here and not in the drafts.
+#
+# It is NOT optional and it cannot be left to the font. The faces are loaded
+# with `Ligatures = TeX`, which switches on XeTeX's tex-text mapping, and that
+# mapping rewrites a lone `"` as U+201D — a CLOSING quote. Every quotation in
+# the first printed facsimile therefore opened with a closing mark. It is not
+# an old-typography convention and no period book does it; it is what TeX does
+# to a straight quote when you have not told it which way the mark faces.
+#
+# A quote OPENS when what precedes it is nothing, space, an opening bracket or
+# a dash, AND what follows it is not space. The second condition is what gets
+# interrupted dialogue right: in `"I never—"` the last mark follows a dash but
+# ends the line, so it closes.
+_DQ_OPEN = re.compile(r'(?:(?<=^)|(?<=[\s(\[{–—]))"(?=[^\s])')
+
+# Single quotes are apostrophes in this book — possessives, contractions, and
+# elisions like 'em and '98 that a word-initial rule would turn the wrong way.
+# So everything becomes U+2019 except the one unambiguous case: a single quote
+# against the inside of a double quote, which is speech reported inside speech.
+_SQ_OPEN = re.compile(r'(?<=[“(])\'')
+
+
+def quotes(s):
+    s = _DQ_OPEN.sub("“", s).replace('"', "”")
+    return _SQ_OPEN.sub("‘", s).replace("'", "’")
+
+
 def inline(s):
     """Markdown inline → TeX. Escaping runs first, so the markers have to be
     found afterwards; they survive escaping untouched."""
-    s = esc(s)
+    s = quotes(esc(s))
     s = re.sub(r"\*\*(.+?)\*\*", r"\\caps{\1}", s)
     s = re.sub(r"(?<!\*)\*([^*]+?)\*(?!\*)", r"\\emph{\1}", s)
     # An em dash typed as three hyphens or as the character both want the
@@ -95,6 +124,15 @@ def blocks(body):
         if re.fullmatch(r"(-{3,}|\*{3,}|#{1,6}\s*)", chunk):
             yield ("break", None)
             continue
+        # A numbered movement heading — "## 1", "## IV." — is a scene break,
+        # not a heading. The movements are the writer's own divisions and a
+        # book of this period marks them with a rule and never with a number.
+        # Without this the headings fell through to the title case below and
+        # were dropped in silence, running five movements together as one
+        # unbroken run of prose. An h1 is still the title.
+        if re.fullmatch(r"#{2,6}\s*[0-9IVXLC]+\.?", chunk):
+            yield ("break", None)
+            continue
         if chunk.startswith("#"):
             continue                      # the title; taken from front matter
         yield ("para", " ".join(l.strip() for l in chunk.splitlines()))
@@ -104,6 +142,12 @@ def opening(text):
     r"""The first paragraph of a story in a book of this period opens with a
     two-line drop capital and runs its first few words on in caps. Returns
     the \lettrine call."""
+    # Turn the quotes before splitting, not after. Each piece below goes
+    # through inline() separately, and a mark decided from its neighbours
+    # cannot be decided once it is alone in a fragment: an opening quote cut
+    # off from the word it introduces came out as a closing one. quotes() is
+    # idempotent, so the later inline() calls leave the turned marks alone.
+    text = quotes(text)
     m = re.match(r"^(\W*)(\w)(\S*)\s+(.*)$", text, flags=re.S)
     if not m:
         return inline(text)
@@ -117,7 +161,12 @@ def opening(text):
             break
     tail = " ".join(words[len(carried):])
     runin = " ".join(carried)
-    return (f"\\lettrine{{{esc(initial)}}}{{{inline(rest_of_word)} "
+    # Whatever stood before the initial — an opening quote, if the scene
+    # begins on dialogue. It was captured and then dropped, so a scene opening
+    # on speech lost its quote mark and nothing said so. It is set ahead of the
+    # drop capital here, which loses nothing; hanging it in the margin instead
+    # is the finer setting and is Mark's to call.
+    return (f"{inline(pre)}\\lettrine{{{esc(initial)}}}{{{inline(rest_of_word)} "
             f"\\caps{{{inline(runin)}}}}} {inline(tail)}")
 
 
@@ -130,6 +179,20 @@ def story_slug(path):
     if meta.get("slug"):
         return meta["slug"]
     return path.parent.name if path.name.startswith("draft") else path.stem
+
+
+def check_quotes(path, text):
+    """Warn on a paragraph whose quotes do not pair off. The conversion above
+    decides each mark from its neighbours and so cannot tell a typo from a
+    convention; an odd count is where it would have guessed. Stderr only —
+    the body goes to stdout and a warning must not land in the TeX.
+
+    A continued speech legitimately opens a paragraph without closing it, so
+    if the book ever does that, this will say so and can be relaxed then."""
+    n = text.count('"')
+    if n % 2:
+        print(f"   quote warning: {path.name}: {n} quote marks in "
+              f"«{text[:60]}…»", file=sys.stderr)
 
 
 def render_story(path, plate=None):
@@ -145,9 +208,16 @@ def render_story(path, plate=None):
     first = True
     for kind, text in blocks(clean(body)):
         if kind == "break":
+            # A break arriving before any prose is the movement heading that
+            # opens the story, and a rule under the story head would set a
+            # division above the first word of the division.
+            if not any(b.startswith("\\lettrine") or b.startswith("\\noindent")
+                       for b in out):
+                continue
             out.append("\\scenebreak")
             first = True                  # a new scene, not a new story
             continue
+        check_quotes(path, text)
         if first:
             out.append(opening(text) if not out[-1:] == ["\\scenebreak"]
                        else f"\\noindent {inline(text)}")
