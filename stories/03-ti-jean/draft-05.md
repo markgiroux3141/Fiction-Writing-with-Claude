@@ -3,11 +3,11 @@ title: The Long Way Round   # chosen by Mark, 2026-09-10
 slug: 03-ti-jean   # the story folder keeps the character's name; the manuscript file follows the title
 plate: the-attitude-of-grief
 section: The Faces Beneath
-status: final
-draft: 06
-words: 4639
-promoted: 2026-09-14
-source: stories/03-ti-jean/draft-06.md
+status: draft
+draft: 05
+words: 4273
+promoted: -   # pending
+source: manuscript/03-the-long-way-round.md (draft-04 text)
 reading_order: 2      # provisional; 02-georgie is undeveloped and the running order is not settled
 pov: close third on Elmire, in scene, past tense
 period: May - November 1905
@@ -54,107 +54,9 @@ deviations: []
 # The Long Way Round
 
 <!--
-PROMOTED 2026-09-14 from stories/03-ti-jean/draft-06.md. 4639 words, up 366 on draft-05.
+DRAFT 05, 2026-09-14. 4273 words. Branched from the draft-04 manuscript.
 
-Do not revise this file. Revise a new draft in the story folder and promote again.
-
-ROUND 06 WAS THE WHOLE OUTSTANDING LIST, ten items, from the audit at the foot of notes.md.
-Movement budgets now: M1 1248 (+76), M2 899 (+53), M3 1028 (+98), M4 598 (+164), M5 866 (-4).
-M4 was the point: 434 words against a 700-word plan, carrying the story's event. It is now
-598.
-
-WHAT WAS DONE, by item:
-
-  1  M4, THE HOUR AND THE MISFIRE (+164). The window used to shut in one sentence. Now she
-     turns round, puts the brush down in the bucket and has it back before it is under
-     ("there was nothing the matter with the brush"), the ground goes on around her for a
-     paragraph with everybody nearer that path than she is, and she whitewashes the north
-     foot of the coping and then whitewashes the north foot of the coping. L-026's missing
-     third term - involuntary event, knowing, MISFIRED ACTION - is now present at the
-     story's centre.
-     The close was rewritten to keep "she did it properly" AND to leave evidence: "...she
-     could not have said one thing about doing it, except that the whitewash had gone over
-     onto the shell inside the coping along the north foot, which was a thing she had never
-     once let happen." She has no memory of the hour. The work has a record. The two do not
-     agree and she is holding both.
-
-  2  THE ANGER/RAKE TRANSITION. The standing-fact paragraph is gone from between the two
-     in-scene paragraphs; the rule now arrives inside the act, after "She could." The anger
-     runs straight into the experiment, so the causality is visible. Fourth statement of the
-     rule ("and she had never mentioned it to anybody") cut.
-
-  3  THE DRAPERY APPROACH (+85). Drying rendered before the wet hem lands - the ring inside
-     the cistern where the water had been and was not, the shell come up white - and she
-     climbs the path watching her feet because a full can does not forgive you. Her eyes are
-     low, so the hem is what is in front of her. Nothing explains the arrangement.
-
-  4  THE GAZE FLOOR, M1 (+45). One of the women says good morning to the HAT - which M1 has
-     already called "a good place to put your eyes" - and is back at her coping before it is
-     finished, "and there was nothing in that anybody could have pointed at." Deniable, one
-     person, no rule: the same grammar as not putting anything against the plinth. Ancelet
-     now has something to be an exception to, and the aunt's "he had never liked being
-     looked at" has a floor. Deliberately the hat and not the hands, per Mark's own warning
-     that the hands tell was getting overused.
-
-  5  THE DRUMMER (+13). "...and she said it looking the drummer in the face, which cost her
-     nothing." THE ONE I AM LEAST SURE OF - see notes.md. It is the L-029 mid-story
-     recurrence, but "which cost her nothing" is the most pointed clause I have written into
-     this story and it can come out whole without disturbing the sentence.
-
-  6  M2, NOT CUT - AND THIS IS A DECLINE. The audit said cut Ovide's route to pay for the
-     additions. It does not survive contact: it is the only DIACHRONIC avoidance in the story
-     (through, then through-faster, then round by the road) and it is where the title comes
-     from. I reasoned from a paragraph count rather than from reading. Tightened by ten words
-     and re-entered on the route instead of the name; the cut is declined with the argument.
-
-  7  THE CALENDAR STAMPS, twice. "One afternoon in July Elmire was at her own plot cutting
-     back the crape myrtle" -> the job names its own season ("The crape myrtle wants cutting
-     back before it goes woody, and she was at her own plot doing it on the kind of afternoon
-     when..."). "In August she dreamed" -> "She dreamed about the figure the night after she
-     had the ivy off the coping, which is an August job and a bad one." Restrained to two on
-     purpose: converting all ten would be a mannerism, and this is a prescription.
-
-  8/9 ENTRY POINTS. Paragraphs opening on She/Elmire as grammatical subject: 35% -> 31%
-     (31 of 88 -> 29 of 93). Six conversions kept: the store route, "That evening Ovide was
-     in his own yard", "The north face of her coping was the one she did first", "The corner
-     brick was back in and Elmire was working the joint", "The lamb's ear is the part worn
-     smooth, and she put his hand on it", and in M4 "The brush went down into the bucket and
-     was back in her hand before it was under" - which is the better sentence anyway, because
-     the brush acting on its own is the involuntary register L-001 wants at that moment.
-
-     ONE CONVERSION REVERTED. "Anatole Broussard had had that ground thirty-one years" ->
-     "That ground had been Anatole Broussard's..." did not remove a referent fault, it MOVED
-     one: it turned a clean subject into a possessive and left the following "him" with no
-     antecedent. Reverted to Broussard as subject with Elmire named. The entry-point
-     variation is not worth a referent fault.
-
-     NOT SOLVED, AND SAYING SO: single-sentence paragraphs are 33 of 93 (35%), UP from 29 of
-     88 (33%). The isolated one-liner is still the story's only emphasis instrument and it
-     still fires thirty-odd times, so "Stone does not hang" still lands at the volume of
-     "She had been listening". Fixing it means MERGING one-liners that are not earning their
-     white space, which is a structural call on Mark's prose and not one I will make
-     unilaterally. Candidates, if he wants it: "Elmire let that go, the way you let a child's
-     grammar go", "She did not ask him anything else", "She never asked either of them
-     another question about it", and my own "Elmire turned round."
-
-  SWEEP. The round introduced SEVENTEEN referent faults of its own and all seventeen were
-     found by craft/tools/reference-sweep.py and fixed - the gaze-floor sentence ("him" with
-     only a possessive antecedent, "her answer" taking "aunt"), both possessive entry-point
-     conversions, the crape myrtle paragraph (dropping the month dropped the only named
-     Elmire in it), "She turned round" standing alone after a list of four other people, and
-     the M4 crowd paragraph anchored on "Elmire's knees". None of them was findable by
-     reading. Final state is BETTER than what this draft branched from: 76 flagged rows
-     against draft-05's 88.
-
-  10 THE SENSORY GAP, three places. M1 May: the shell giving the heat back up at her by
-     eight and the whitewash going off in the pan faster than it had any business to. M2
-     July: the insects stopping all at once and starting again and nobody able to tell you
-     why, and the heat coming up off the shell and sitting on her. M3 September: "The kitchen
-     was hotter than the yard was and neither of them said anything about it." Before this
-     draft the story had zero instances of heat, sweat, shade, smell or insects across a Gulf
-     South burying ground from May to November.
-
-ROUND 05 WAS ONE WORD. Movement one:
+ROUND 05 IS ONE WORD. Movement one:
 
     He was up out of the row  ->  **Ti-Jean** was up out of the row
 
@@ -198,19 +100,14 @@ brick") and is how a bricklayer's daughter who counts courses would see it.
 Three fixes were offered; Mark took this one. The other two — the drummer carrying a flick of
 the gaze in M2, and prose-04 §1 (Ovide at the hands) — remain available and unspent.
 
-RAISED 2026-09-13. BOTH ARE NOW DONE - A in draft-06, B in draft-05:
+RAISED 2026-09-13. B is done below; A is still open:
   A. The anger/rake transition. "She had never seen anybody put anything against the figure"
      is a standing-fact paragraph slabbed between two in-scene dated paragraphs, at the
      highest-current joint in the movement. Proposal: fold the rule into the act, after
      "She could."
   B. DONE IN THIS DRAFT. "He was up out of the row" -> "Ti-Jean was up out of the row".
 
-A was taken into draft-06 as item 2 above.
-
-SWEEP EVIDENCE FOR L-030, worth keeping: reference-sweep.py output on draft-04 and draft-05 is
-byte-identical apart from the filename line. The pronoun was never flagged, because it HAD a
-valid antecedent - and naming the character introduced no new row. The sweep is necessary and
-it is not sufficient.
+A is one edit and goes into a draft-06 whenever Mark takes it.
 
 Earlier drafts stay as the record and none was overwritten:
 
@@ -219,8 +116,7 @@ Earlier drafts stay as the record and none was overwritten:
                 rounds of Mark's notes. The record of how the story was actually built.
   draft-03.md   the triage of two independent cold reads (review-02.md, review-03.md).
   draft-04.md   the gaze clause at the plinth (L-029). Promoted 2026-09-14.
-  draft-05.md   the M1 pronoun named (L-030). Promoted 2026-09-14.
-  draft-06.md   the whole outstanding list, ten items. Promoted 2026-09-14.
+  draft-05.md   this one. The M1 pronoun named (L-030).
 
 THE TITLE, chosen by Mark 2026-09-10: **The Long Way Round**. It does not name the figure, it is a
 noun phrase, and it is drawn from the story's own vocabulary five times over - Azelie sends
@@ -284,9 +180,7 @@ book-bible.md as a collection-level finding, not here.
 
 Elmire had one side of the coping scrubbed and was waiting on it to dry before eight.
 
-It was the first Saturday in May and the ground was dry enough to kneel on. By eight the
-shell was giving the heat back up at her and the whitewash was going off in the pan faster
-than it had any business to. A coping wants
+It was the first Saturday in May and the ground was dry enough to kneel on. A coping wants
 washing twice a year, and whitewash after that, and the shell inside it raked over. That
 work was hers, and her mother's before her. The north corner was hers in a different way.
 Her father had laid that coping the year she was married and had put too much sand in the
@@ -316,8 +210,8 @@ told anybody what the mouth was like.
 Three families were said to own that plot. Elmire had heard all three names and had never
 once heard any of the three say it.
 
-The north face of her coping was the one she did first in the mornings, because a north
-face dries last and wants the start of the day. That put the path behind her.
+She did the north face of her coping first in the mornings, because a north face dries
+last and wants the start of the day. That put the path behind her.
 
 Tante Azélie came in at the gate at about nine with her two grandchildren, who went
 straight over the wall, and Ti-Jean behind her.
@@ -332,10 +226,6 @@ good hat, and everybody in the parish had said something nice about it at one ti
 another. It was a good place to put your eyes and it was always there. His shoes were a
 child's shoes and had to be sent for. His coat was a man's coat, because a coat does not
 have to fit.
-
-One of the women two rows over said good morning to Ti-Jean as he went by and said it to
-the hat, and was back down at the coping before he had answered, and there was nothing in
-that anybody could have pointed at.
 
 He said good morning to Elmire on his way down to the cistern and she said it back to his
 hands. There was whitewash on her own knuckles and she looked at that. Then she made
@@ -357,7 +247,7 @@ little with it. He had a bird's egg in his pocket that he had been carrying abou
 three days and had shown to everybody twice. The lime dried on Elmire's wrists and cracked
 when she turned her hand over, and she would taste it at dinner.
 
-The corner brick was back in and Elmire was working the joint with her thumb when she heard
+She had the corner brick back in and was working the joint with her thumb when she heard
 the bucket go down.
 
 Ti-Jean was up out of the row and going up the middle of the path, going for the figure at
@@ -371,8 +261,8 @@ He did not look back at the figure.
 
 A child hauled off a dog looks back.
 
-The lamb's ear is the part worn smooth, and she put his hand on it, and he was pleased with
-it and kept his hand there longer than she needed him to. Then she found she still had
+She put his hand on the lamb's ear, which is the part worn smooth, and he was pleased with
+it and kept his hand on it longer than she needed him to. Then she found she still had
 hold of his shoulder, and had had for a while, and that her heart was going for no reason
 she would have given. She got her hand off him. Numa called something up the row and she
 answered it without hearing what it was.
@@ -408,16 +298,15 @@ believed it had gone up. Then she sat a while with her hands not moving in the p
 she never did finish the sentence. She said she did not know why she had started. She
 asked after Elmire's boy.
 
-The short way through to the store was the way Ovide Hébert had gone his whole life, and he
-went round by the road now. In between there was a good while when he still cut through and walked it
-faster than he used to, and if anybody had asked him he would have said the shell was bad
-in there.
+Ovide Hébert kept the store, and he had taken the short way through to it his whole life,
+and he went round by the road now. In between there had been a good while when he still
+cut through and walked it faster than he used to, and if anybody had asked him he would
+have said the shell was bad in there.
 
 A drummer up from Franklin wanted the Guidry place and asked Elmire which of the boys
 about the store was Guidry's, so he could send word out.
 
-She said he would be the small one, and he would have a hat on, and she said it looking the
-drummer in the face, which cost her nothing.
+She said he would be the small one, and he would have a hat on.
 
 She was most of the way home before it came to her that there was a thing she could have
 said that would have told him at once, and that she had gone round it without slowing
@@ -438,10 +327,9 @@ Elmire's brother thought that was the finest thing he had ever heard and used to
 to do it in front of company. So it was nothing. It was a word Ti-Jean had, and he put it
 on what he was fond of.
 
-The crape myrtle wants cutting back before it goes woody, and Elmire was at her own plot
-doing it on the kind of afternoon when the insects stop all at once and start again and nobody
-can tell you why. The heat came up off the shell and sat on her. She came to standing up
-with the shears open and nothing in them. Her neck was stiff on the left side. It was stiff because she had her
+One afternoon in July Elmire was at her own plot cutting back the crape myrtle, which
+wants doing before it goes woody, and she came to standing up with the shears open and
+nothing in them. Her neck was stiff on the left side. It was stiff because she had her
 head turned so the path stayed where she could see it without looking at it, and it had
 been turned that way long enough to set.
 
@@ -451,8 +339,7 @@ There was nothing on the path, and there had not been anybody in the ground but 
 she came in at the gate. She cut the crape myrtle too hard on that side and then had to
 take the other side down to match it.
 
-She dreamed about the figure the night after she had the ivy off the coping, which is an
-August job and a bad one, and there was nothing bad in the dream. She went
+In August she dreamed about the figure, and there was nothing bad in the dream. She went
 up the middle of the path at her own pace, not hurrying, on a bright morning with the
 shell white and her hands empty. She put her hand on the face. It was easy.
 
@@ -468,7 +355,6 @@ Elmire went over to Azélie's on a Tuesday in September with a dish of rice and 
 do the ironing, because the daughter was still down and the day had got away from that
 house.
 
-The kitchen was hotter than the yard was and neither of them said anything about it.
 Ti-Jean was out at the woodpile where they could see him from the window, at a job that
 took him a long while and that nobody needed done that afternoon.
 
@@ -516,31 +402,28 @@ at him until the answer was done. Straight at him. The way you look at anybody a
 Elmire found that her back teeth were together and had been for some time. She was angry.
 She turned it over the whole way home and could not find one person to be angry at.
 
+She had never seen anybody put anything against the figure. Not a rake, not a coat, not a
+bucket. There was no rule about it, and nobody had ever mentioned it to her, and she had
+never mentioned it to anybody.
+
 She took her rake up there on the Thursday and stood it against the plinth, the way she
 would have stood it against a coping, to see whether she could. She did not once look above
 the second course of brick.
 
-She could. It stood there like a rake standing against anything. She had never in her life
-seen anybody put anything against it, not a rake, not a coat, not a bucket, and there was
-no rule about it and nobody had ever mentioned it to her. She had it back in her hand
-before she had finished thinking about it, and she went down the row and did the lamb,
-which did not want doing.
+She could. It stood there like a rake standing against anything. She had it back in her
+hand before she had finished thinking about it, and she went down the row and did the
+lamb, which did not want doing.
 
-Anatole Broussard had had that ground thirty-one years, and Elmire asked him who had set
-the figure, and she asked plainly, standing in the door of his shed, because there was no
+Anatole Broussard had had that ground thirty-one years. She asked him who had set the
+figure, and she asked plainly, standing in the door of his shed, because there was no
 sideways way to put it. He said nothing went into that ground that he did not dig the hole
 for, and he had never dug that one. She asked him what was in the plot. He said there was
 nothing in it. Nobody had ever been put there.
 
 She did not ask him anything else.
 
-Three days after that it had not rained and the whole ground was drying. The copings were
-going pale from the edges in, because the edges are thin. There was a ring round the inside
-of the cistern where the water had been and was not. The shell had come up white and gone
-loose again, and everything anybody set down on it stood in its own small dent.
-
-She carried the can up from the gate with both hands and watched her feet the whole way,
-because the shell is loose past the third row and a full can does not forgive you.
+Three days after that it had not rained, and the whole ground was drying. The copings were
+going pale from the edges in, because the edges are thin.
 
 The drapery was dark with water from the knee down, the way a hem goes dark, and where it
 had always lain flat against the leg it was off the leg and hanging.
@@ -590,24 +473,8 @@ name, and then her mouth was shut and her arm was still going.
 His aunt was in there and Ovide was in there and Father Ancelet was in there, and the
 granddaughter of hers who was eleven was in there somewhere with the cans.
 
-Elmire turned round.
-
-The brush went down into the bucket and was back in her hand before it was under. There was
-nothing the matter with the brush.
-
-The Thibodeaux men went on with their three copings and did not look up off them. The
-woman two rows over got to the end of the hip and started on a sister-in-law. Somebody's
-dog came down the row and was sent away from something further along. A child went by
-Elmire with a can in both hands, going the other way, and then went by again with it
-empty. Every one of them was nearer that path than she was. Every one of them had
-their own dead in front of them.
-
-She whitewashed the north foot of the coping and then whitewashed the north foot of the
-coping.
-
-It took her the best part of an hour and she did it properly, and afterward she could not
-have said one thing about doing it, except that the whitewash had gone over onto the shell
-inside the coping along the north foot, which was a thing she had never once let happen.
+She turned round and finished the coping. It took her the best part of an hour and she did
+it properly, and afterward she could not have said one thing about doing it.
 
 ## 5
 
@@ -615,8 +482,8 @@ Ovide found Ti-Jean at about eleven and Théo Landry was there. Neither of those
 ever said what they saw, then or after, and both of them were asked by people with more
 right to ask than Elmire had.
 
-That evening Ovide was in his own yard looking at his fence, which had wanted a rail since
-spring, and he went on looking at it while she stood there. She would
+She went over that evening and Ovide was in his own yard looking at his fence, which had
+wanted a rail since spring, and he went on looking at it while she stood there. She would
 not go until he gave her something about the boy. He gave her one thing.
 
 They could not get his hand down.

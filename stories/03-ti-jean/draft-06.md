@@ -3,11 +3,11 @@ title: The Long Way Round   # chosen by Mark, 2026-09-10
 slug: 03-ti-jean   # the story folder keeps the character's name; the manuscript file follows the title
 plate: the-attitude-of-grief
 section: The Faces Beneath
-status: final
+status: draft
 draft: 06
 words: 4639
-promoted: 2026-09-14
-source: stories/03-ti-jean/draft-06.md
+promoted: -   # NOT PROMOTED. Mark reads this before it goes to the manuscript.
+source: manuscript/03-the-long-way-round.md (draft-05 text)
 reading_order: 2      # provisional; 02-georgie is undeveloped and the running order is not settled
 pov: close third on Elmire, in scene, past tense
 period: May - November 1905
@@ -54,11 +54,9 @@ deviations: []
 # The Long Way Round
 
 <!--
-PROMOTED 2026-09-14 from stories/03-ti-jean/draft-06.md. 4639 words, up 366 on draft-05.
+DRAFT 06, 2026-09-14. 4639 words, up 366. NOT PROMOTED - Mark reads this first.
 
-Do not revise this file. Revise a new draft in the story folder and promote again.
-
-ROUND 06 WAS THE WHOLE OUTSTANDING LIST, ten items, from the audit at the foot of notes.md.
+ROUND 06 IS THE WHOLE OUTSTANDING LIST, ten items, from the audit at the foot of notes.md.
 Movement budgets now: M1 1248 (+76), M2 899 (+53), M3 1028 (+98), M4 598 (+164), M5 866 (-4).
 M4 was the point: 434 words against a 700-word plan, carrying the story's event. It is now
 598.
@@ -220,7 +218,7 @@ Earlier drafts stay as the record and none was overwritten:
   draft-03.md   the triage of two independent cold reads (review-02.md, review-03.md).
   draft-04.md   the gaze clause at the plinth (L-029). Promoted 2026-09-14.
   draft-05.md   the M1 pronoun named (L-030). Promoted 2026-09-14.
-  draft-06.md   the whole outstanding list, ten items. Promoted 2026-09-14.
+  draft-06.md   this one. The whole outstanding list, ten items.
 
 THE TITLE, chosen by Mark 2026-09-10: **The Long Way Round**. It does not name the figure, it is a
 noun phrase, and it is drawn from the story's own vocabulary five times over - Azelie sends

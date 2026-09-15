@@ -214,3 +214,209 @@ straight swap for #5 if Mark prefers it, but not alongside.
 **M4 is now 376 words** and has nothing in it but the crowd, the eight o'clock sighting, the
 walk past at ten, the list, and the hour she cannot account for. That is the skeleton's *least
 in it* taken literally. Flagged for a decision once M5 exists, not before.
+
+---
+
+## Round 04 — the gaze clause at the plinth (2026-09-14)
+
+**Change:** ten words in M3. `... to see whether she could.` **`She did not once look above the
+second course of brick.`** Nothing else in the draft is touched.
+
+**Origin.** Mark asked whether the anger→rake linkage works or is just displacement — *"like
+kicking the dog when your boss chews you out. If so, is this enough for the reader to latch on
+to."* Extracted as **L-029** before revising.
+
+The diagnosis is not that the link is missing. It is written: the hat is *"a good place to put
+your eyes and it was always there"*, and she says good morning to his hands. **Both are in M1,
+within three hundred words of each other**, and the gaze then goes silent for ~2,500 words
+until Ancelet. The reader is not holding the pattern when the rake needs it, so they land on
+displacement — which is fluent, reports no symptom, and is the wrong reading, because
+displacement *discharges* the anger and M4 needs her still loaded.
+
+### Pre-flight, scoped honestly to a ten-word change
+
+A full twelve-item pass on 4,272 otherwise-unaltered words would be theatre. What was actually
+run, and what was not:
+
+**Item 0 (a) — what happens to somebody here?** Nothing new, and the clause does not claim to
+add fear. Its job is that the *existing* beat lands on the reading that keeps her loaded into
+M4. The involuntary event in this beat is unchanged and is *she had it back in her hand before
+she had finished thinking about it* — the body overruling the null result. **(b) Where would a
+reader put the book down?** Unchanged by this edit; on the standing list it is M4's 434 words.
+
+**Item 1 — banned phrases.** Zero hits on the new sentence.
+
+**Item 9b — reference sweep.** Run on the full draft. One row touches the new sentence:
+
+> `[p54] 'she'` — A: *She took her rake up there on the Thursday and stood it against the
+> plinth, the way she would have stood it against a coping, to see whether she could.*
+> B: *She did not once look above the second course of brick.*
+
+**Judged clean.** Elmire is the subject of both sentences and the paragraph has no other
+actor.
+
+The collision worth recording is not a pronoun. **`the second course of brick` sits one clause
+after `a coping`, and copings in this story are brick.** Kept, on three grounds: the coping in
+that sentence is a counterfactual (*the way she would have stood it against a coping*) and is
+not an object present in the scene, so there is nothing there to look above; M1 introduces the
+plinth as *on two courses of brick* and it is the only multi-course object in the story; and a
+definite noun phrase resolves against prior mention and salience rather than strict proximity,
+which is what makes it a different case from the pronouns the sweep exists for. Logged here so
+the judgment is on the record rather than re-made from scratch next round.
+
+**Item 10 — the seam.** The two sentences that now abut were read with referents named. No cut
+was made this round, so no deleted anchoring is in play.
+
+**Not run, and not claimed:** items 2–8, 11, 12. They test the draft, and the draft is
+draft-03, which passed them at promotion.
+
+### Why "the second course of brick" and not "the plinth"
+
+It is M1's own measurement, and counting courses is how a woman who has spent the story picking
+her father's bad mortar out of a corner would see a thing. `plinth` is in the previous sentence
+and would read as a plain repeat.
+
+### What the clause is doing, never stated
+
+Both avoidances performed in one gesture: she proves she can put a rake against the thing while
+failing to look at it, and does not notice the contradiction. The test she designed answers a
+question she did not ask; the real answer is in her eyes, and she is not looking there. Nothing
+names the link — Elmire cannot connect her two avoidances without the self-knowledge L-021
+forbids, and a narrator who connects them converts the story into a thesis `wound` refuses.
+
+### Still open, offered 2026-09-13, not accepted and not in this draft
+
+- **A. The anger/rake transition.** *She had never seen anybody put anything against the
+  figure* is a standing-fact paragraph slabbed between two in-scene dated paragraphs, at the
+  highest-current joint in the movement. Proposal: fold the rule into the act, after *She
+  could.*
+- **B. The M1 pronoun.** *He was up out of the row* — nearest antecedent is Numa, who holds the
+  pronoun in the previous paragraph; bucket-vs-can is 300 words back; *the way a child goes at
+  a dog* confirms the wrong reading; resolution arrives 60 words later inside dialogue.
+  Proposal: *Ti-Jean was up out of the row.*
+- **The other two gaze fixes**, unspent: the drummer carrying a flick of the eye in M2, and
+  prose-04 §1 (Ovide at the hands).
+
+---
+
+## Round 05 — the M1 pronoun (2026-09-14)
+
+`He was up out of the row` → **`Ti-Jean was up out of the row`**. One word. Promoted same day.
+
+Raised by Mark 2026-09-13, agreed, then **not applied for a round** because *"let's do the
+first fix"* was read against the gaze list rather than the open list. That is in **L-030** as a
+process note, because the cost was a whole round: ask which list, do not pick the nearer one.
+
+**Sweep evidence, worth keeping.** `reference-sweep.py` output on draft-04 and draft-05 is
+byte-identical apart from the filename line. The pronoun **was never flagged** — Ti-Jean is a
+grammatically valid antecedent, so the nearest-candidate test passed it — and naming the
+character introduced no new row. The failure the tool cannot see is *semantic reinforcement*:
+the last male referent holding a pronoun is Numa, who is nine, and *the way a child goes at a
+dog* in the same sentence fits Numa perfectly. The sentence argues for the wrong reading.
+
+---
+
+## Outstanding — CLEARED 2026-09-14 in draft-06, promoted. Kept below as the record of the round.
+
+Everything discussed and not applied, as of 2026-09-14. **None of these is started.**
+
+### Raised this round, mine, and ranked
+
+| # | Item | Size | Note |
+|---|---|---|---|
+| 1 | **M4 — the misfired action at the climax.** She sees him, her arm keeps going, and the window shuts in one sentence. No misfire anywhere in the story's centre (L-026 wants involuntary event → knowing → *misfired action*; only the first two are present). Render the hour: the same foot of brick whitewashed three times, the brush into the bucket and out again with nothing decided. | ~200 w | **The single highest-value edit in the story.** M4 is 434 w against a 700 w plan and carries the event |
+| 2 | **The anger/rake transition** (open item A). Standing-fact paragraph slabbed between two in-scene dated ones at the movement's highest-current joint. Fold the rule into the act, after *She could.* | ~0 net | Discussed at length 2026-09-13 |
+| 3 | **M3, the drapery approach.** The whole impossible budget is four words and the run-up is two sentences opening on weather (*Three days after that it had not rained*) — the weakest joint in the story. Put the reader's eye on hems and water before the sentence lands. | ~80 w | L-010, the wrongness in the approach |
+| 4 | **prose-04 §1 — Ovide at the hands.** The gaze floor. Third gaze fix, unspent; also review-03's escalation #2, which says *he had never liked being looked at* has nothing under it and F7 has nothing to be an exception to. | ~60 w | In `exploration-audit.md` as flagged-undecided |
+| 5 | **The drummer carries a flick of the gaze** (M2). Second gaze fix, unspent. Would give the motif a mid-story instance — the L-029 spacing problem, solved inside an existing beat. | ~10 w | Cheapest of the three |
+| 6 | **Pay for the above out of M2.** Seven items in 846 words, four proving the same proposition. Cut Ovide's route: the drummer does it colder, and Ovide is worth more arriving fresh in M5. | −80 w | |
+| 7 | **Transitions: stop stamping the calendar.** ~10 paragraph openings are date markers (*In August*, *That week*, *Three days after that*). M5 already holds the alternative in the story's own vocabulary — *the runners off it in February, the wash before Easter, the ivy in August* — arriving as summary on the last page. Move part of it forward and the season is named by **what job it is**. | structural | This is the "push further into the labour" note, as a fix rather than more texture |
+| 8 | **Transitions: carry a noun across the break.** Paragraphs open on new names (*Madame Dugas was ninety-one*, *Ovide Hébert kept the store*) — the register of a ledger. | structural | |
+| 9 | **Vary the paragraph entry point.** 31 of 88 paragraphs open with *She* or *Elmire* as grammatical subject. 30 of 88 are a single sentence, so the isolated one-liner is the only emphasis instrument and it fires thirty times — which is why *Stone does not hang* lands at the same volume as *She had been listening*. | structural | review-03's *"the register never modulates"*, at paragraph scale |
+| 10 | **The sensory gap.** Across a Gulf South burying ground, May to November: zero instances of heat, hot, warm, sweat, shade, smell or insects. One *sun*, one *light*. That is not restraint, it is a missing sense, and the vocabulary is already in the story (lime on her wrists, glare off the shell, cistern water, mortar going off in the pan). | free | The one place "more picture" belongs |
+
+### Pre-existing, carried in the manuscript header since 2026-09-10
+
+- **The three paragraphs after *His hat was on the plinth when they found him*.** A cold reader
+  called that the best image in the story and said it is then explained across three
+  paragraphs. Text is Mark's almost verbatim, so it was passed up rather than cut. STILL OPEN.
+- **The rule off-page is provisional and mine, not Mark's.** Three candidates in `skeleton.md`;
+  L-008 is satisfied either way. Never chosen.
+- **Four scored beats unspent:** #4 *the long way round* (Mark scored it, it was silently
+  dropped, and the story's title now carries a beat the prose does not), the brother and the
+  mule, F3 (children looking at him), and the peppermint F1 — a one-line reversion.
+- **The Léonide date**, cut from Madame Dugas. One clause, goes back in a line.
+- **The refrain.** *before she had thought about it* ×2 plus *before she had finished thinking
+  about it* at the rake. If the ending ever feels blunt, thin the rake.
+
+---
+
+## Round 06 — the whole outstanding list (2026-09-14)
+
+`draft-06.md`, **4,639 words, up 366. NOT PROMOTED** — Mark reads it first.
+
+Movement budgets against the original skeleton plan:
+
+| | plan | draft-05 | draft-06 | |
+|---|---|---|---|---|
+| M1 | 900 | 1172 | 1248 | +76 |
+| M2 | 800 | 846 | 899 | +53 |
+| M3 | 900 | 930 | 1028 | +98 |
+| **M4** | **700** | **434** | **598** | **+164** |
+| M5 | 900 | 870 | 866 | −4 |
+
+M4 was the point of the round. It carried the story's event at 434 words against a 700-word
+plan; it is now 598.
+
+### Item 0, the two merit questions
+
+**(a) What happens to somebody here?** Before this draft, nothing happened to anybody at the
+story's centre. L-026 wants involuntary event → knowing → **misfired action**, and M4 had the
+first two and not the third: her arm kept going, which is suppression. Now the brush goes down
+into the bucket and is back in her hand before it is under, and there was nothing the matter
+with the brush; and she whitewashes the north foot of the coping and then whitewashes the
+north foot of the coping. **(b) Where would a reader put it down?** The standing answer was
+M4's thinness. If it is anywhere now it is M2, which is still seven beats in 899 words.
+
+### The two calls I made against the list
+
+**#6 declined.** The audit said cut Ovide's route from M2 to pay for the additions. It does not
+survive contact with the paragraph: it is the only **diachronic** avoidance in the story —
+through, then through-but-faster, then round by the road — and it is where the title comes
+from. I had reasoned from a paragraph count rather than from reading. Tightened ten words and
+re-entered on the route instead of the name; the cut itself is declined with the argument.
+
+**#9 half done, and the half that matters is not.** Openings on She/Elmire: 35% → 31%. But
+**single-sentence paragraphs went UP, 29 of 88 to 33 of 93.** The isolated one-liner is still
+the only emphasis instrument in the story and still fires thirty-odd times, which is why
+*Stone does not hang* lands at the volume of *She had been listening*. The fix is merging
+one-liners that are not earning their white space, and that is a structural call on Mark's
+prose. Candidates listed in the draft header.
+
+### The sweep earned its keep again
+
+**The round introduced seventeen referent faults and all seventeen were caught by the script,
+none by reading.** Notably: the new gaze-floor sentence had *him* with only a possessive
+antecedent and *her answer* taking **aunt**; **both** of my possessive entry-point conversions
+(Ovide, Broussard) broke the pronouns that followed them; dropping *"One afternoon in July
+Elmire was"* removed the only named Elmire from the crape-myrtle paragraph and left eight
+pronouns anchored on *Elmire's mother*; and *She turned round.* stood alone immediately after
+a list of four other people.
+
+Final state is **better than the text it branched from — 76 flagged rows against draft-05's
+88** — because two of the fixes (naming Ti-Jean in the gaze-floor sentence, naming Elmire at
+Broussard's shed) also cleared pre-existing faults.
+
+### The one I am least sure of
+
+**#5, the drummer:** *"...and she said it looking the drummer in the face, which cost her
+nothing."* It is the L-029 mid-story recurrence and it does the job, but *which cost her
+nothing* is the most pointed clause in the story and it sits in the paragraph whose whole
+method is that she does **not** notice until she is most of the way home. It can come out
+whole without disturbing the sentence, and if Mark reads it as the narrator nudging, cut it.
+
+### Other checks
+
+Banned-phrase grep: **zero hits** across the full draft. One impossible thing: still one — the
+drapery approach adds drying, a ring inside the cistern and loose shell, and no second anomaly.
+Sensory gap closed at three points (heat 1 → 3, insects 0 → 1), deliberately not more.
