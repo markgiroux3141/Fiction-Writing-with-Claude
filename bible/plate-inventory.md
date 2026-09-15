@@ -2,7 +2,9 @@
 
 The photographs, and what each one is a story of. **Rewritten 2026-09-09**: every file
 in `wet plate photographs/` was looked at, renamed from its generator filename to a
-descriptive slug, and given a story idea. Thirty-eight photographs, plus the cover.
+descriptive slug, and given a story idea. **Forty-three photographs, plus the cover** — the
+four in § VII plus `the-scratched-face` were added by Mark on 2026-09-11 and are the only
+pictures in the set that were made for a story instead of found.
 
 `the tall one.png` keeps the name it already had — it is story 01's plate and is in the
 render pipeline under that name.
@@ -12,6 +14,16 @@ the *period* rather than from the pictures, organised by axis, with an eighteen-
 band burned at the head. Where an entry below leans on one of those axes it says so
 (`pool C1`, `pool M5`). The two files are meant to cross-pollinate: a plate suggests an
 image, the pool suggests the machinery, and neither is a story until Mark picks.
+
+⚠ **How to read an entry (D-007, 2026-09-14).** Every `What's frightening` line below is
+meant to be **one clause of essence** — the thing the picture does to you — and several of
+them overreach into physical description of the subject. Take the clause and discard the
+inventory. These images were generated; their detail is noise rather than authorship, so
+there is no correct reading of a surface to be had, and any premise resting on root fibre,
+grain, damage, exposure or anatomy rests on nothing. Test every reading by asking **would it
+survive if the same subject were a pencil sketch?** The entries were written before this was
+understood and are being left in place rather than rewritten, because the descriptive
+sentences are still a usable way to find a picture in the folder. They are not evidence.
 
 **The story ideas here are premises, not events**, and none of them has been scored
 against `invention-protocol.md`'s four tests. A chosen premise still needs its own
@@ -749,6 +761,147 @@ keeps his coat buttoned in August, and the district decides he has got proud.
 
 ---
 
+## The Scratched Face
+`the-scratched-face.png`
+
+Added by Mark 2026-09-11. A figure seated on rock at the edge of open water: scaled bodice,
+a long fish tail with fins draped over the stone, wet hair, both arms raised with the fingers
+bent and held. Paper print, folded in quarters, foxed, corners gone. **The face is
+obliterated** — not struck through but worked out, a radiating field of hundreds of fine
+strokes cut into the emulsion, running on past the face into the hair and down onto the
+shoulder.
+
+**What's frightening:** the scratching is an afternoon's work, and the print was kept. Somebody
+sat at a table under a good light with a needle for the better part of an hour, and then folded
+it in four and filed it instead of burning it.
+
+**Story.** Not the creature — the act. It is a costume, with seams and a hem, which makes the
+picture a commercial product and means nobody in the story has to believe in anything. The
+readings worth having are all readings of the defacement: paid retouching (a real trade and
+largely a women's one), a killed negative, a family excising a face it recognised, a buyer's
+written condition, the model going through the stock herself. **Full riff, the four places
+Mark's siren framing hits the craft folder, and three rendered moments:
+`bible/plate-explorations/the-scratched-face.md`.**
+[flag: **there is rock in this photograph** and Louisiana's coast has none — sand, shell,
+marsh. Same class of problem as `the-undercut-tree`'s hills, and it has a better answer:
+stone on that coast was barged in and laid by a gang, so the picture was made at a
+construction site with forty witnesses. [check] the jetty works are not covered in
+`reference/period/`]
+[near: **`the-specimen`** — a curiosity that cannot be sold and cannot be got rid of, with the
+impossible thing in the correspondence, is the same object in a different costume. One of the
+two has to move. `stories/04-ship/prose-01.md` #5 is a third instance]
+
+---
+
+# VII. The vessel
+
+**Four photographs, added by Mark 2026-09-11**, generated after the story 04 conversation and
+renamed from their generator filenames the same day. They are the first pictures in the set
+that were made *for* a story rather than found and then interrogated, and the entries below
+are written in that knowledge.
+
+All four read as **paper prints**, cracked, foxed and folded, like *The Attitude of Grief*
+and *The Ox* — see § *What the book actually prints*. `the-ones-at-the-rail` has lost a
+corner of the emulsion and `the-ship-under-way` has lost the whole upper left of the sheet.
+Crease lines run through the picture area in three of the four.
+
+**They are plausibly one vessel** — the same heavy three-masted hull, seen at sea, at sea
+again, from alongside, and from her own deck. D-001 does not care, because they would all
+serve one story, but nothing obliges them to be the same ship and the catalogue does not
+assert it.
+
+**They correct `stories/04-ship/notes.md` §3.1**, which said the set contained no vessel and
+argued that the story would therefore have to face a portrait. That was true on 2026-09-11 at
+nine in the morning and is not true now, and the argument it was carrying — that a portrait
+plate keeps the story on a person and off the ship as spectacle — has to be made on its
+merits instead of by default.
+
+**And they cut against §2 of the same file.** Three of the four are **open sea**: a running
+swell, foam at the stem, no land anywhere. The finding in `notes.md` was that blue water
+breaks the book's register and the passes and the bays do not. These photographs are not
+inshore. Either the story goes outside the islands and the register argument was wrong, or
+the plate and the prose disagree and one of them gives. That is a real decision and it is
+Mark's.
+
+## The Ones at the Rail
+`the-ones-at-the-rail.png`
+
+A three-masted ship bows-on and under way in a running sea, bowsprit pointed very nearly at
+the lens, a wave breaking white along her stem. Yards crossed, canvas furled or hanging.
+Along the head rail and down the port side stand men in hats — six or seven of them clearly,
+more further aft — not working. Watching.
+
+**What's frightening:** where the photographer is. To make this picture with a wet plate you
+need a tripod, a tent, chemistry, and something like ten seconds of stillness, and you need
+all of it in open water, ahead of a ship that is moving, at a range of perhaps thirty yards.
+The men are looking at whoever is doing that.
+
+**Story.** The impossible thing is in the making of the plate and not in the scene, which is
+motif II (*a plate is a reflection that was made to stay*). One route: the plate is in a
+dead operator's effects with his day-book, and the day-book accounts for every plate he
+poured that season except this one, which is not entered, is not numbered, and is the only
+one of them anybody wants to buy. The wound is the sale. [flag: the found-album frame is
+`book-bible.md`'s open ⚠ and this entry leans on it; ban-list #3 is nearby, since a reader
+will start counting the men]
+
+## The Ship Under Way
+`the-ship-under-way.png`
+
+The same heavy hull from off the port bow, heeled over, making way with a bow wave. Her yards
+are full of canvas that is neither set nor furled — hanging, bagged, streaming down in loops.
+The upper left of the sheet is gone and the whole picture is dissolving into the paper, so
+that the rigging and the foxing are the same substance in places.
+
+**What's frightening:** the gear. No crew alive lets sail hang like that, and she is
+travelling.
+
+**Story.** The ban list's first entry is the derelict found with the table laid, and this
+picture walks straight into it, so the way in is the law rather than the mystery: **a vessel
+making way is not a derelict, and no salvage is payable on her.** Men board her, find what
+they find, bring her in, and are owed nothing — the claim is heard, and the court is
+interested only in whether she was moving. What they pay is the hearing: sworn testimony, on
+paper, about a thing none of them will say in the words they would use ashore. [flag: near
+ban-list #1, named so it can be argued; the impossible thing must stay off the page and in
+the transcript]
+
+## The Ship Alongside
+`the-ship-alongside.png`
+
+Close in against her side, the picture crowded to the edges: planking with every seam showing,
+a spar angled across the frame, a sail bundled and lashed against the bulwark, and rope —
+standing rigging, running gear, mooring line — laid across the whole picture in three
+directions. A deckhouse or companion at the top right. She is tied up, and the water is flat.
+
+**What's frightening:** nothing, which is the point. It is a maintenance photograph. Somebody
+stood in a boat and made a plate of a hull's port side because the hull's port side was the
+subject.
+
+**Story.** This is the collection's own register — *the horror is administered on a schedule,
+forever* — in its marine dialect, and it is the plate for the labour rather than the event.
+Scraping, paying, careening at the low of the year, a plank cut out and a new one set in
+because a boat out of the water is not earning. Pairs with `stories/04-ship/prose-01.md` #6.
+[flag: a hull repaired until no original timber remains is a known puzzle and will read as a
+concept rather than a story; the way past it is the account, not the paradox]
+
+## The Empty Deck
+`the-empty-deck.png`
+
+Looking aft and down along the deck from high at the bow. A sail bagged along its boom and
+half stopped off, coils and falls hanging from the pin rail, a mast with its fife rail, bitts,
+a boat or hatch cover in the foreground, the horizon in the gap at the right. No one.
+
+**What's frightening:** the work is half done and set down. Not tidy and not wrecked —
+interrupted, and left in the state a job is left in when somebody means to come back to it.
+
+**Story.** The nearest neighbour in the set is `the-empty-house`, and the same discipline
+applies: the ordinary explanation is available (they are all below, it is a meal, it is a
+watch below) and it gets killed once, on the page, in front of the reader (L-018). The story
+is whoever is standing where the camera is standing. Pairs with `prose-01.md` #7, which is a
+man alone on deck reporting a fouled line. [near: ban-list #1 again — this is the derelict's
+deck without the derelict, and the difference has to be earned]
+
+---
+
 ## Numbering: catalogue vs. printed
 
 Filenames are **names, not numbers**, deliberately: the catalogue outlives any particular
@@ -799,6 +952,9 @@ Recurring elements to deploy deliberately rather than accidentally:
 | **Wrong faces** | the-sitter, the-face-in-the-hair, the-painted-man, the-one-in-the-bonnet, the-attitude-of-grief |
 | **Nothing wrong at all** | the-gentleman, the-old-man, the-crow, the-empty-house, the-ox |
 | **Patience** | the-sitter, the-attitude-of-grief, the-one-on-the-banister, the-encrusted-man, the-seated-angel |
+| **The vessel** | the-ones-at-the-rail, the-ship-under-way, the-ship-alongside, the-empty-deck |
+| **The made object defaced** | the-scratched-face — the only picture in the set that somebody has attacked |
+| **Open sea** | the-ones-at-the-rail, the-ship-under-way, the-empty-deck — the only pictures in the set with no land in them |
 | **Wings** | the-attitude-of-grief, the-seated-angel, the-winged-child |
 | **Children** | the-wrapped-child, the-winged-child, the-thing-on-the-floor, the-house-with-everyone-in-it |
 

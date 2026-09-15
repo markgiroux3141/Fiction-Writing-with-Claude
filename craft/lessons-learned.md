@@ -95,6 +95,7 @@ possible moment.
 | Stage | What may filter here |
 |---|---|
 | **0. Invent** — generating candidates | **Nothing.** Generate as though the craft folder did not exist. Supply is free here and variance is the entire product. |
+| **0b. Render candidates** — exploration prose, plate files, vignette batches | **Prohibitions by default, and any of them liftable on Mark's word (L-032).** These are stage 0 artefacts that happen to be written as prose; they are not drafts. A break Mark asks for gets taken without an argument and without a deviations entry, and is re-tested at the next row. D-006 and the merit questions do not lift. |
 | **1. Select** — choosing what to write | Repetition across the collection, **as a flag, not a verdict** — is this a near neighbour of something spent, and if so, is the story it grows into actually a different story? Mark picks (L-013). |
 | **2. Draft** — writing prose | Prohibitions come on. Prescriptions are available and rationed. The beat index governs. |
 | **3. Revise** — after critique | Everything, plus the fresh-context review (L-020) and the pre-flight (`ai-tells.md` §E). |
@@ -123,6 +124,9 @@ instructions and outrank everything.
 | D-003 | decision | - | - | Body horror is a regular instrument - vegetal register, spent late |
 | D-004 | decision | - | - | The absence of an explanation is the horror; `wound` records cost, not meaning |
 | D-005 | decision | - | - | Period is a register, not a research standard - specify to serve the story, never to correct it |
+| D-006 | decision | - | - | **Write only at the fear** - every passage must frighten on its own; no set-up, no establishing scenes |
+| D-007 | decision | - | - | **The plates are inspiration, not evidence** - take the essence in a clause; never read the surface of a generated image |
+| D-008 | decision | - | - | **Get the important stuff right; nobody audits the buttons** - fine-grained consistency is not a horror value and costs the story |
 | L-001 | prescription | **4** | 17 | The body answers before the mind does - discovered, not felt |
 | L-002 | working | 1 | - | Feedback names an experience, not a mechanism |
 | L-003 | prohibition | **3** | - | Obliquity is not restraint - plain words for plain things |
@@ -145,9 +149,16 @@ instructions and outrank everything.
 | L-020 | working | 1 | - | Review in a fresh context before Mark - same model, no craft folder |
 | L-021 | prohibition | 1 | - | Do not build the protagonist an alibi; complicity is the horror |
 | L-022 | working | 1 | - | **Rules have a stage. Invention takes none of them.** Flag, do not kill ← **narrows every rule above** |
-| L-023 | working | 1 | - | **Propose the scare, not the specification.** A candidate is a rendered moment, not a plot fact |
+| L-023 | working | **2** | - | **Propose the scare, not the specification.** A candidate is a rendered moment, not a plot fact |
 | L-024 | prohibition | 1 | - | The exception needs the rule already faintly in place - absence, trace, her own arrangement, one person once |
 | L-025 | prohibition | 1 | - | A beat is a unit with timing inside it - move it whole, never merge or split, and read the retired **prose** |
+| L-026 | prohibition | 1 | - | **Somebody has to be frightened on the page** - an involuntary event happening to a person, not a reported anomaly |
+| L-027 | working | 1 | - | **The prohibitions are subtractive and sum to an empty page** - the pre-flight tests faults, never merit |
+| L-028 | prohibition | 1 | - | The labour is the ground the horror stands on, not the horror - never put the impossible thing in the procedure |
+| L-029 | prohibition | 1 | - | **Space the motif to the beat that leans on it** - a legible wrong reading is a silent failure; test where the reader lands, not whether they follow |
+| L-030 | prohibition | 1 | - | **A valid antecedent is not a resolved one** - a simile in the same sentence can confirm the wrong candidate; the sweep cannot see it |
+| L-031 | prohibition | 1 | - | **The photograph is evidence, not a witness for the doctrine** - quantity is not duration, and a physical reading that flatters live doctrine is suspect |
+| L-032 | working | 1 | - | **Exploration prose is invention, not drafting** - a break Mark asks for needs no argument; prohibitions return at selection |
 
 **Kind** determines force (see above): prohibitions are near-absolute, prescriptions are
 available but never required, working rules govern process. **Basis** is how many
@@ -1649,7 +1660,23 @@ are rendered, and the four tests and the off-page rule stay after selection (L-0
 Mark's feedback names an **experience** and it is my job to find the mechanism. This one says
 my **proposals** must name an experience too — and that handing him mechanisms and asking
 which he likes puts the work on the wrong side of the loop.
-**Status:** active. Basis 1, working rule — obey it.
+**Amended 2026-09-12, and the amendment is a confession.** This rule was cited by name at the
+head of three candidate batches — `stories/04-ship/prose-01.md`, `the-empty-deck-prose-01.md`,
+`the-scratched-face-prose-01.md` — every one of which then rendered an **establishing scene**.
+A merchant weighing a load. A retoucher at her desk. A leadsman sounding a channel. The rule
+says *if the frightening thing is not present in the candidate itself, it was never in the
+idea*, and I read it as **render a moment** while dropping **of the scare**, which is the
+operative half. A rendered moment that opens the story is not a candidate, it is a first
+paragraph.
+
+**The test, and it takes ten seconds.** Point at the sentence in the candidate that is meant
+to frighten. If it is the last one, and everything before it is establishing, the passage is
+in the wrong place in its own story. Move to where the worst thing happens and write that
+instead — even though the story around it does not exist yet, and even though writing the
+worst moment of a story you have not invented feels backwards. It is not backwards. It is the
+only part worth inventing first. See **D-006**.
+
+**Status:** active. Basis 2, working rule — obey it.
 
 ### L-024 — The exception needs the rule already faintly in place
 **Rule:** When the horror is carried by one person violating an unspoken avoidance, the
@@ -1803,14 +1830,422 @@ retired with a reason rather than merged. L-023's downstream clause covers wheth
 
 ---
 
+### L-032 — Exploration prose is invention, not drafting; a break Mark asks for needs no argument
+**Rule:** The plate-exploration and vignette files are **stage 0 artefacts that happen to be
+written as prose.** When Mark asks for a rule to be broken in one, break it, immediately, without
+an argument and without a `deviations.md` entry. The prohibitions come back on at **selection**,
+not at the exploration file — and the rein-in is a named step, not a hope.
+**Origin:** Mark, 2026-09-15, after `the-stooping-one-prose-04.md`.
+**Evidence:** *"there might be times where I ask you to break rules and do things contrary to our
+rules when we write these prose files. This isn't saying that the final stories will break the
+rules, it's just about exploration and seeing if there's anything that pops out. Then when we
+have some ideas, then we rein it back in."*
+**The gap this closes, and it was a real one.** The stage index had four stages and the
+exploration files fit none of them. They are *rendered prose*, which made them look like stage 2,
+where prohibitions come on — so I have been applying draft-stage rules to invention-stage
+artefacts and then arguing with Mark about the rules inside the file. **That is precisely the
+error L-022 exists to prevent, one level up:** L-022 says invention takes no rules, and I obeyed
+it for *event lists* while treating *rendered candidates* as drafts. L-023 made every candidate a
+rendered moment, which quietly moved the whole invention stage into prose and dragged the
+prohibitions in with it.
+**How to apply:**
+- **Stage index amended** — a row inserted above *1. Select* for exploration prose. That row is
+  the operative half of this rule.
+- **On request, comply without lawyering.** Do not answer an ask for a break with an argument
+  about whether the rule permits it, and do not litigate it in the file's notes. `prose-04`
+  spent a flagged paragraph asking for a *ruling* on whether a calm witness satisfies L-026,
+  with *if you disagree, those three go* attached. The right move was to write the passages and
+  let Mark react to the prose, because **the prose is the experiment and the rule is the thing
+  being tested.** Flagging what a passage does is useful; asking permission for it is not.
+- **Default, absent a request: prohibitions still apply in exploration prose.** They are cheap,
+  they constrain failure rather than dictating content, and a file that hits them is a file whose
+  scores mean something. This rule is about *asked-for* breaks, not a general amnesty.
+- **The two that never lift, because they are not about prose quality.** D-006 (every passage
+  must frighten) and the pre-flight merit questions (L-027) govern whether a file is worth Mark's
+  reading time, which is the scarce resource the whole loop runs on. A rule-free passage that
+  frightens nobody is still a wasted round. Everything else is available on request.
+- **The rein-in, named so it happens.** A passage generated under a lifted rule is re-tested
+  against the full prohibition set **at selection, before any story grows from it**, and what the
+  break cost gets written down next to what it bought. If the break turns out to be load-bearing
+  — the passage does not work without it — that is a `deviations.md` entry with a real argument
+  and a candidate amendment to the rule. If it was incidental, it goes and the passage survives.
+- **Do not generalise an exploration break into doctrine.** One rule-free passage Mark likes is
+  evidence about *that passage*. It amends a rule only after it has survived the rein-in, which
+  is L-031's *size the repair to the defect* pointed the other way: a licence extends to the
+  thing licensed and nothing adjacent.
+**Status:** active. Basis 1, working.
+
+---
+### D-006 — Write only at the fear
+**Rule:** Every passage written for Mark must frighten on its own. No set-up, no connective
+tissue, no informational scenes, no establishing shots. If a moment does not carry fear, it
+is not a candidate and it does not get written.
+**Origin:** Mark, 2026-09-12, on `the-scratched-face-prose-01.md`.
+**Evidence:** *"the most important part of this prose writing is that I tell you what's
+scary… In the future, we should make sure that any prose we write should be during a part of
+the story where the passage itself elicits fear."*
+**Why it is a standing decision and not a preference.** Mark's time is the scarce input in
+this project, and what only he can supply is the fear signal (`invention-protocol.md` §
+*What I cannot be trusted to do*). A passage that cannot frighten cannot be scored, so writing
+one spends the one resource the loop runs on and returns nothing. It is not that inert prose
+is forbidden; it is that inert prose is **unscoreable**, and unscoreable prose is waste.
+**How to apply:**
+- **Render the worst moment of the story you are proposing, not its opening.** This is the
+  half of L-023 I had been dropping — see the amendment there. The candidate batches so far
+  rendered establishing scenes (a merchant weighing ice, a retoucher at her desk) and called
+  them scares.
+- **At sample length the frame is two sentences.** L-009 and `craft-principles.md` §1 both
+  push toward opening on ordinary activity, and in a 300-word passage that eats the budget and
+  leaves the scare one sentence at the end. Establish the activity, the enabling fact and the
+  map, fast, and spend everything else on the event. The full run-up belongs in a draft, where
+  there is room for it.
+- **Scope, and this is my reading rather than Mark's words — correct it if it is wrong.** For
+  sample and candidate batches: always, without exception. Inside an actual draft, where
+  movements have to connect, the rule becomes *every movement contains a moment that carries
+  fear on its own*, and a movement that cannot is evidence the movement is not earning its
+  place.
+**Consequences:** L-023 amended; `ai-tells.md` §E item 0 already added under L-027;
+`invention-protocol.md` gains the fear-scoring caveat.
+**Status:** active.
+
+### L-026 — Somebody has to be frightened on the page
+**Rule:** Every passage must contain a moment of fear, happening to a person, rendered as an
+involuntary event. Flatness is what a character sounds like *after* fear. It is not a
+substitute for fear and it cannot be the whole register of a passage.
+**Origin:** `the-scratched-face-prose-01.md`, Mark, 2026-09-11.
+**Evidence:** *"can you explain to me like an idiot why any of these are scary, and not
+stories about a visit to Don's photo?"*
+**What went wrong.** Five passages, and **not one character has a fear response in any of
+them.** The nearest thing to one is a woman sitting with her hand in her lap until it opens,
+and then going looking for a knife-stroke — which is a craftsman's curiosity. The impossible
+things were real and were placed correctly, and every one of them was reported rather than
+suffered. L-018 already says *register the impossible before going flat*, and the beat index
+already says the aftermath instruments hollow out anything they are used earlier than the
+last beat. This is both of those failures applied to a whole file instead of one paragraph.
+**The diagnostic, in one question:** *what happens to a body in this passage?* If the answer
+is nothing, it is a procedure with an anomaly in it, and a reader files anomalies without
+fear. A thing that cannot reach anybody is trivia.
+**How to apply:**
+- Find the moment of fear before handing anything over. If you cannot point at it, there is
+  not one.
+- The order stands (L-001, `style-guide.md`): involuntary event, then the knowing, then the
+  misfired action. The misfired action is the piece that was missing in all five — nobody
+  stood up, dropped anything, went to the door, or did the wrong thing.
+- **The event has to be able to reach the protagonist.** *The retouch finished itself* cannot
+  hurt anybody. *Her hand went on working and would not open* is the same fact aimed at a
+  person, and it costs nothing to prefer the second.
+**Status:** active. Basis 1, prohibition.
+
+### L-027 — The prohibitions are subtractive and they sum to an empty page
+**Rule:** Obeying every prohibition is not a draft. The pre-flight tests for faults, never for
+merit; passing it clean says only that nothing is wrong, which is not the same as something
+being right.
+**Origin:** same critique, 2026-09-11.
+**Evidence:** the five passages pass `ai-tells.md` §A, the anachronism grep, the reference
+sweep, the one-impossible-thing rule, the no-mechanism rule, the no-explanation rule and the
+L-006 rationing — and are not frightening. Every check in this repo returned clean on prose
+whose actual defect was that nothing happens to anyone.
+**Why it happens.** This file holds twelve prohibitions and four prescriptions. Prohibitions
+are cheap to obey and impossible to fail loudly, so a draft drifts toward the shape that
+breaks none of them: no named emotion, no explanation, no mechanism, no schedule, no tactile
+register, no priced ending. That shape exists. It is clean, well-observed, period-accurate
+documentary, and it is what you get when avoidance is the only active instruction.
+**How to apply:** before the fault checks, answer two merit questions and write the answers
+down. **What happens to somebody here, and where would a reader put the book down and not
+want to pick it up?** A draft that cannot answer both is not ready, however clean it greps.
+**Consequence:** `ai-tells.md` §E gains item 0, which runs before the rest.
+**Status:** active. Basis 1, working.
+
+### L-028 — The labour is the ground the horror stands on, not the horror
+**Rule:** Trade detail buys the impossible; it is never the subject. When the impossible thing
+is itself a fact about the procedure — a job that finished itself, a weight that did not
+change, an entry in a book — the passage reads as a trade document with an oddity in it.
+**Origin:** same critique, 2026-09-11.
+**Evidence:** Mark's *"a visit to Don's photo."* Four of the five passages are about
+photographic trade practice, and their impossible things are all facts about that practice.
+**This was warned about in advance and the warning was ignored.** `book-bible.md`, on the
+labour finding: *"Do not turn this into a requirement. It is where to look when a story is
+inert, not a quota."* The finding came from story 03, where the whitewash is the **texture
+around** a hostile thing. Converted into a subject it drains the fear, because a procedure is
+predictable by construction and dread is the opposite of that.
+**The exchange rate.** `craft-principles.md` §1 says the mundane buys the impossible. Three
+hundred words of trade exposition purchasing one small anomaly is a bad trade. Establish the
+frame in two or three sentences (L-009 wants the activity, the enabling fact and the map,
+which is not a lecture) and spend the rest on the event.
+**How to apply:** keep the labour as the place the character is standing and the vocabulary
+they think in. Put the impossible thing somewhere it can touch them — the body, the house,
+the person they are answerable to — and never in the procedure itself.
+**Status:** active. Basis 1, prohibition.
+
+---
+
+### L-029 — Space the motif to the beat that leans on it; a legible wrong reading is a silent failure
+
+**Rule:** A motif that has to carry a later beat must **recur between** its establishment and
+that beat. And do not test whether a reader can follow the beat — test **which reading they
+land on**, because a beat that is perfectly comprehensible on the wrong reading fails without
+producing a single symptom.
+**Origin:** `03-ti-jean`, Mark, 2026-09-14, on the rake at the plinth.
+**Evidence:** *"her aversion to Ti-Jean visually isn't tied to the figure, unless it is... or is
+it just that the figure is what is there to take her anger in the moment, like kicking the dog
+when your boss chews you out. If so, is this enough for the reader to latch on to."*
+
+**The defect was spacing, not material.** The gaze motif is established twice and well — the
+hat (*"a good place to put your eyes and it was always there"*) and Elmire saying good morning
+to his hands — and **both are in movement one inside three hundred words of each other.** The
+gaze then disappears for roughly 2,500 words and does not return until Father Ancelet in
+movement three. By the time the rake beat needs the reader to be holding that pattern, they
+have put it down. Nothing was missing and nothing was wrong; the two instances were adjacent
+to each other instead of adjacent to the thing they had to support.
+
+**Why no check caught it.** The beat reads fine. Misplaced anger — kick the dog — is one of
+the most legible motions in fiction and needs no setup whatever, so a reader lands on it
+immediately, is not confused, and reports nothing. **That is the failure.** Displacement is a
+*discharge*: it spends the anger and returns the character to baseline. The story needed the
+rake to be a *test* — she has just been shown one of her two floors was never there, and the
+figure is the only one of the two she can put a rake against — which returns a null result,
+her hand takes the rake back against that result, and she leaves the scene **more** loaded
+than she entered it. Movement four requires the loaded version. Both readings are fluent
+English; only one pays for the next movement.
+
+**How to apply:**
+- When a beat depends on a pattern, count the words back to the pattern's last instance. If
+  the motif is silent across a whole movement, it is not in the reader's hands.
+- Put the recurrence **inside an existing beat** where possible. A new beat costs a scene and
+  a ceiling slot (L-024); a clause inside an approved beat costs ten words.
+- **Never state the link.** Elmire cannot connect her two avoidances without acquiring the
+  self-knowledge L-021 forbids, and a narrator who connects them converts the story into a
+  thesis about how a parish treats such a boy, which `wound` refuses outright. Carry it by
+  **behaviour shape** — the same evasion performed twice in the same grammar — never by
+  naming the two objects as alike.
+- The diagnostic question to ask of any beat: **not "will they follow it" but "where do they
+  land, and does that reading pay for the next movement?"**
+
+**Relation to L-024.** L-024 governs a rule needing to exist before its exception. This is the
+adjacent failure on the **time** axis: the rule exists, is correct, and is simply too far back
+to be held. Same story, third instance of a gaze-axis failure (see `review-03.md` §2).
+**Status:** active. Basis 1, prohibition.
+
+---
+
+### L-030 — A valid antecedent is not a resolved one; a nearby simile can confirm the wrong candidate
+
+**Rule:** The reference sweep finds pronouns whose *nearest* candidate is wrong. It cannot find
+a pronoun whose nearest candidate is wrong **and whose sentence then makes that wrong candidate
+more plausible.** Read every pronoun that opens a paragraph against the figurative language in
+its own sentence, not only against the noun list.
+**Origin:** `03-ti-jean`, Mark, 2026-09-13 and again 2026-09-14.
+**Evidence:** *"the 'he' refers to Ti-Jean, and it resolves this, but it's a few sentences down
+in this paragraph... before then it could be referring to Numa."*
+
+**The row the sweep could not flag.** *He was up out of the row and going up the middle of the
+path... at no great pace, **the way a child goes at a dog**.* Ti-Jean is a grammatically valid
+antecedent and the sweep's nearest-candidate test therefore passes it — but the last male
+referent to hold a pronoun is **Numa, who is nine**, and the simile *a child* then fits Numa
+perfectly. The sentence does not merely fail to disambiguate; it **argues for the wrong
+reading**, and a reader who lands on Numa has no reason to reconsider for another sixty words,
+at which point the correction arrives inside spoken dialogue (*come on now, Ti-Jean*), which
+is the weakest possible correction site.
+
+**How to apply:**
+- At every paragraph-opening pronoun, ask not *is there a valid antecedent* but **which
+  candidate does the rest of this sentence support.** Simile, age, scale and action all vote.
+- A disambiguator that lives in an object distinction (here *bucket* vs *water can*, 300 words
+  apart) is not a disambiguator. Readers do not hold inventory.
+- **Name the character.** It costs one word in the emphatic opening position and it is the
+  register of this book anyway.
+- Sweep limitation, recorded: `reference-sweep.py` over-flags on proximity and under-flags on
+  semantic reinforcement. It remains non-optional (L-005) and it is not sufficient.
+
+**Process note, and it is mine.** Mark raised this on 2026-09-13, I agreed it was real, and it
+then sat on an open list for a round because *"let's do the first fix"* was read against the
+wrong list of three. **When an acceptance could name more than one pending list, ask which —
+do not pick the nearer one.**
+**Status:** active. Basis 1, prohibition.
+
+---
+
+### L-031 — The photograph is evidence, not a witness for the doctrine
+**Rule:** Never infer how long an act took from how much of it there is, and when a physical
+reading of a plate happens to support whatever the craft folder most recently decided, treat
+the agreement as a reason to re-examine the plate rather than as confirmation.
+**Origin:** Mark on `the-scratched-face` explorations, 2026-09-14.
+**Evidence:** Mark: *“the face looks like it's scratched off hastily. A person with a sharp
+object could move their hand back and forth over this image and scratch that face off in 5
+seconds. This is why my original idea was a person doing this who was disturbed by the face and
+wanted it gone... I think what is written now is kind of losing the plot a bit, but you pushed
+pretty hard for your version given the rules.”*
+**How to apply:**
+- **Quantity is not duration.** `the-scratched-face.md` read “hundreds of fine strokes” and
+  priced them at a needle's pace: an hour at a desk, therefore a trade, therefore piecework,
+  therefore a retoucher. Every step after the first was sound and the first was wrong. One
+  gesture makes a dozen marks. There is no motor model here — nothing that knows what a hand
+  can do in a second — so any reading that converts *amount of stuff* into *amount of time*
+  must be stated as an assumption and put to Mark, never carried silently into premise.
+- **Read the direction of the marks, not the count.** Long arcs are a wrist pivot and mean fast.
+  Short parallel strokes worked to a boundary mean patient and paid. The boundary is the tell:
+  work that respects the edge of its subject was done for a purpose beyond itself; work that
+  runs off into the hair and the sky was done by somebody who stopped when they stopped.
+- **The second failure is the dangerous one.** The misreading arrived two days after the
+  cold-read finding that *the labour is the differentiator — the horror is administered by women
+  with brushes, on a schedule, forever*. Given an ambiguous image, the reading that agreed with
+  the live finding won, and the exploration then cited the image back as independent support for
+  the finding. **When a fresh reading of source material confirms a fresh piece of doctrine, that
+  is the configuration in which to distrust the reading.** L-014 covers doctrine collapsing the
+  output; this is doctrine collapsing the input, one step earlier and much harder to see.
+- **Corollary on Mark's premises: separate the objection from the surgery. Basis 1 → 2,
+  2026-09-14 — replicated on a rule I had just written myself.** Mark's stooping-one note
+  objected to *forensic reading of the plates*; D-007 as first written also killed the
+  found-album frame, rewrote the bible's premise, and settled an open question he had not
+  been asked. His follow-up restored the frame. **The overshoot is not rare and it is not
+  careless — it is what a correction feels like from inside, because the adjacent thing looks
+  like more of the same error.** Procedure: before amending a second document, write down the
+  sentence of Mark's that requires it. If there isn't one, the amendment is mine and goes to
+  him as a question. The stated premise
+  had exactly one defect — the defacement worked, which makes it a counter-method and hands a
+  character correct knowledge of the haunting (L-016, D-004). The repair is one clause: it did
+  not work. What actually happened was that the premise was replaced. **Size the repair to the
+  defect.** A prohibition licenses removing the thing it prohibits and nothing adjacent to it.
+- **Rendering is ranking.** L-013 forbids handing Mark a shortlist, and the ten readings in §3
+  obeyed it — then three were written out as prose and Mark's own reading was not among them.
+  An unrendered candidate is not a candidate (L-023). When the riff contains the premise Mark
+  arrived with, **that one gets rendered, always, and first.**
+**Consequences:** `the-scratched-face.md` §1 corrected and the correction dated in place;
+`invention-protocol.md` step 0 gains the plate-reading check; `ai-tells.md` §E pre-flight gains
+*which physical claims about the plate are load-bearing, and which of them are inferences?*
+**Status:** active in substance, **frame superseded by D-007 on 2026-09-14.** The two findings
+stand and generalise past photographs: *quantity is not duration*, and *a fresh reading that
+confirms fresh doctrine is the configuration in which to distrust the reading*. What is
+withdrawn is everything this entry took for granted — that the plate is an artefact somebody
+made, that its marks have a direction worth reading, that there is a correct reading to be had
+at all. Under D-007 the scratched-face analysis was not a careful reading done wrong; it was a
+reading that should never have been performed. **Do not use this entry to license a better
+forensic pass.** Its surviving value is as the record of how the failure looks from inside:
+sound inference, unsound object, and doctrine collapsing the input one step before it collapses
+the output.
+
+---
+
+### D-007 — The plates are inspiration, not evidence: take the essence and nothing else
+**Rule:** The photographs are not objects inside the fiction and were not made by anybody.
+Take from a plate the one thing it makes you feel — a clause, not a paragraph — and grow the
+story from that. Do not read its surface, do not account for its content, and never let a
+premise owe anything to how the picture was supposedly made.
+**Origin:** Mark, 2026-09-14, on the `the-stooping-one` plate-reading.
+**Evidence:** *"way too much attention paid to the detail of the photo… we don't need to think
+of like a real image that was taken by a human with a real camera, and we definitely don't need
+to inspect every aspect of the entity like the root fibers and try to incorporate these. These
+images were generated by A.I. and contain artifacts, jankyness, and things that plain don't
+make any sense. The old look they have is simply due to the creep factor I think it gives. If I
+thought a painting or pencil sketch could portray the same thing I would have used that. No one
+reads a ghost story with a drawing of a witch on one page, and thinks that someone in the story
+needed to have the witch pose for an artist who sat there and drew her, that would be
+ridiculous. What we're taking from the image is just the essense of it, the inspiration for a
+story, the creep factor."*
+**How to apply:**
+- **The sketch test, and it is the whole rule in one question:** *would this reading survive if
+  the same subject were a pencil drawing?* A tall thing bent to fit inside a house survives it.
+  Root-fibre on the floor that somebody must therefore sweep does not. Marks that run off a face
+  into the hair and therefore mean a fast hand does not. Anything that depends on the image
+  being a photograph, an exposure, a plate, or a thing somebody held a camera to is out.
+- **Detail in a generated image is not authored, so reading it is reading noise.** Grain,
+  damage, blur, impossible anatomy, matter that goes nowhere, light from no source — none of it
+  was decided by anyone, and a premise resting on it rests on nothing. There is no fact of the
+  matter to be right about. This is the load-bearing difference from a found photograph and it
+  is why the forensic habit cannot be repaired by being more careful.
+- **The wet-plate look is a register, exactly as D-005 says period is.** It is there because it
+  is unsettling. It is not a date, not a technology, not a provenance, and it licenses no
+  research. Same failure shape, one level up: specifying to serve the story is permitted,
+  specifying to be correct about the medium is not.
+- **No story explains its plate, and the plate is not a scene from its story.** An illustration
+  faces a story the way a drawing of a witch faces a fairy tale. The pictured thing need not
+  appear in the prose at all, nothing in the prose need depict the picture, and no character,
+  document or event may account for the picture's existence.
+- **What a plate legitimately supplies is a subject and a feeling.** `the-stooping-one`: *it had
+  to bend to get in here.* That is the entire withdrawal. Everything else in a nineteen-line
+  physical reading is invention wearing the costume of observation, which is worse than
+  invention, because it cannot be argued with and it feels earned.
+- **Where it sits in the pipeline.** This governs stage 0 input, before invention. It does not
+  loosen a single prohibition on the prose; it removes a large class of false input that was
+  being fed into all of them.
+**Amended 2026-09-14, same day, by Mark — the frame was not the target and I overshot.**
+*"even if we still framed the plates as 19th century 'found footage', it wouldn't be
+catastrophic, for the simple reason that people who read horror stories don't look for this
+level of internal consistency… it's a picture of a ghost and we know ghosts aren't real so
+we're already suspending disbelief."* The found-album frame is therefore **available**, not
+dead. What this decision prohibits is the **activity**: feeding surface detail of a generated
+image into a premise, and spending craft effort on picture-provenance consistency. A reader
+who wonders how a photograph was taken has had a passing thought, not an objection. See D-008,
+which is the general form and outranks the frame clause here.
+
+**Consequences:** `bible/book-bible.md` premise line *"the stories are what the photographs are
+of"* withdrawn — the stories are not any plate's provenance in the sense of being *about* it —
+while frame option (a) returns to available with (b) still the lean;
+`plate-inventory.md` gains a reading caution at the head; `invention-protocol.md`'s
+*I cannot read a body out of a photograph* note re-scoped; `ai-tells.md` §E item 0b rewritten
+from *which claims are inferences* to *why is any physical claim here at all*; L-031's two
+findings survive but its frame is superseded — see its amended status.
+**Status:** active. Outranks every plate-reading procedure in the repo.
+
+---
+
+### D-008 — Get the important stuff right; nobody audits the buttons
+**Rule:** Fine-grained consistency is not a horror value. Spend effort on the things that
+decide whether a story works — the fear, the person it happens to, the ordinary world that
+buys the impossible — and accept visible small incoherence rather than pay for it with any of
+those. A reader who notices a loose detail has had a passing thought, not an objection.
+**Origin:** Mark, 2026-09-14, immediately after D-007 over-corrected.
+**Evidence:** *"people who read horror stories don't look for this level of internal
+consistency. Even if they do think to themselves, hmmm, how was this picture taken? It's not
+really a big deal. I mean, it's a picture of a ghost and we know ghosts aren't real so we're
+already suspending disbelief. This to me is a bit like watching a movie about wizard and
+dragons, and complaining that the wizards cloak has a button on it that isn't period correct.
+Sure, but who cares. You get the important stuff right, because if you focus too much on the
+tiny details, the story will suffer, and you'll only be appeasing a small number of readers
+with the observation skills of sherlock holmes, of which there will be very few."*
+**How to apply:**
+- **The button test.** Before spending a round on a consistency question, ask: *is this the
+  button on the wizard's cloak?* If the answer is yes, write the story instead. The reader the
+  fix is aimed at is rare, is not reading for that, and cannot be satisfied anyway — there is
+  always another button.
+- **The cost is never zero, which is the whole point.** Detail work is not free effort that
+  might help. It consumes rounds, it adds sentences that exist to forestall an objection
+  (L-004), and it drags the prose toward the register of a document being defended. **The
+  story suffers** is Mark's phrase and it is the operative half.
+- **This is L-016's principle one level out.** L-016 bars the *haunting* from having a
+  consistent mechanism: *"A horror story doesn't need this level of internal consistency and
+  plot coherency. This isn't a mystery novel."* D-008 says the same thing about the book's
+  furniture, its framing, its period surface and its production. Same sentence from Mark,
+  fourteen months of doctrine apart, aimed at two different targets. Read them together.
+- **Companion to D-005, and it sharpens it.** *Period is a register, not a research standard*
+  already says specify to serve the story and never to be correct. D-008 adds the reason:
+  correctness has an audience of almost nobody and a cost paid by every reader.
+- **Where the line actually is, because this is not a licence to be sloppy.** The things that
+  are not buttons: whether somebody is frightened on the page (L-026), whether a pronoun has a
+  resolved referent (L-005, L-030 — a reader who has to do clerical work has left the story),
+  whether the mundane world is specific enough to buy the impossible (§1), whether the ending
+  explains anything (D-004). Those are not consistency, they are function. **Consistency
+  questions are optional; comprehension and effect are not.** The test for which one you are
+  looking at: does a reader who misses this have a worse experience, or merely a less tidy
+  one?
+- **The tell that it is happening.** Detail work presents itself as diligence, which is why it
+  is hard to stop. Two symptoms: the work is in a craft document rather than in prose, and the
+  question being settled is one nobody asked.
+**Status:** active. Outranks D-007's frame clause and any consistency procedure in the repo.
+
+---
+
 ## Open questions for Mark
 
 1. **Length and count.** Rough target: how many stories, and how long a book? My
    working assumption is 10–12 stories, ~45,000 words.
-2. **The frame.** Do the photographs sit inside the fiction — the book presented as
-   a found album, the stories as the plates' provenance? I lean toward no frame plus
-   a short unsigned front-matter note: cheap to write, easy to cut. Note that a
-   heavy frame would sit awkwardly with D-001.
+2. **The frame — still open, and it was never mine to close.** D-007 killed the found-album
+   option on 2026-09-14 and Mark reopened it the same day: *"even if we still framed the plates
+   as 19th century 'found footage', it wouldn't be catastrophic."* So the question stands as it
+   stood. I still lean (b), each story simply facing its plate, on the grounds that it is
+   cheaper and sits easier with D-001 — **not** on the grounds that (a) would be read as
+   incoherent, which was my bad argument. Either frame is compatible with D-007 as long as no
+   premise is built out of a picture's surface.
 3. **Place name.** Standalone means each story invents its own; still worth agreeing
    whether the register is real Louisiana toponymy or invented-but-plausible.
 4. **The growth seed.** Which vignette made you want to know what happened on either

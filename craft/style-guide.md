@@ -113,6 +113,9 @@ should always know what time of day it is and how long has passed.
 - Semicolons are welcome in the period voice, rare in the modern one.
 - Italics for emphasis are a tell. Let the syntax do it.
 - No ellipses for atmosphere. Trailing off is not the same as restraint.
+- Straight quotes in the drafts. The render turns them into the printed marks and
+  gets the direction right; typed `` `` `` and `''` do not survive the pipeline.
+  See **Quotes** in `render/README.md`.
 
 ## Titles
 

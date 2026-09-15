@@ -213,6 +213,27 @@ process it is meant to correct.
 
 Before any draft is handed over:
 
+0. **The two merit questions, answered in writing, before anything below** (L-027). Items 1–12
+   test for faults and a clean pass proves only that nothing is wrong. **(a) What happens to
+   somebody here?** Name the moment of fear and the involuntary event that carries it; if you
+   cannot point at one, the passage is a procedure with an anomaly in it (L-026). **(b) Where
+   would a reader put the book down and not want to pick it up?** Name the sentence. Nothing
+   below can find a draft that fails these, and the whole of `the-scratched-face-prose-01.md`
+   passed every other item on this list.
+
+0b. **Does anything here depend on the plate being a real photograph?** Rewritten 2026-09-14
+   under D-007. The question is no longer *which of my physical claims are inferences* but **why
+   is there a physical claim about the picture in this draft at all.** Apply the sketch test to
+   every one: would it survive if the same subject were a pencil drawing? If it needs the image
+   to be an exposure, an artefact, a thing somebody held a camera to — or if it builds on detail
+   a generator produced, which no one authored and which frequently means nothing — cut it. A
+   plate contributes one clause of essence upstream of invention and contributes nothing to the
+   prose. **And then stop — do not audit the rest (D-008).** Whether a reader could work out how
+   the picture was taken is the button on the wizard's cloak: it costs a round, it buys one
+   reader in a hundred, and sentences written to forestall it are L-004 faults. Two residual checks from L-031 still
+   earn their place: never convert *amount of stuff* into *amount of time*, and if a reading of
+   source material agrees with the newest thing in the craft folder, distrust the reading.
+
 1. Grep the banned-phrase list. Zero hits.
 2. Read the last paragraph alone. Does it explain or summarise? Cut it.
 3. Count sentences in three consecutive paragraphs. Is the variance real?

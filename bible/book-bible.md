@@ -10,18 +10,30 @@ Remaining ⚠ items await Mark's decision.
 ## Premise
 
 The cover presents the book as an object with a history — a black-boarded album with
-a plate set into the front. The photographs are not illustrations commissioned for
-the stories; the stories are what the photographs are *of*.
+a plate set into the front.
 
-⚠ **Frame decision.** Two options:
-- **(a) Found album.** An explicit frame: someone has acquired the plates and the
-  stories are the provenance they assembled. Adds a spine and a final payoff.
-- **(b) Implicit.** No frame; each story simply faces its plate. Cleaner, less
-  gimmick risk.
+⚠ **Withdrawn 2026-09-14 (D-007).** This section used to read *"the photographs are not
+illustrations commissioned for the stories; the stories are what the photographs are of."*
+That is repealed. Mark: *"No one reads a ghost story with a drawing of a witch on one page,
+and thinks that someone in the story needed to have the witch pose for an artist who sat
+there and drew her, that would be ridiculous."* The pictures are illustrations. They face
+the stories, they were the inspiration for them, and **no story is any plate's provenance.**
+Nothing in the fiction accounts for a photograph existing.
 
-I lean (b) with one exception — a short front-matter note, unsigned, half a page,
-that establishes the album without committing to a narrator. Cheap to write, easy
-to cut.
+**Frame decision: still open, and both options are live.** I closed this as (b) on
+2026-09-14 and Mark reopened it the same day (D-008): *"even if we still framed the plates as
+19th century 'found footage', it wouldn't be catastrophic… it's a picture of a ghost and we
+know ghosts aren't real so we're already suspending disbelief."* Nobody audits how the
+photograph got taken, and building the book around forestalling that question is the button on
+the wizard's cloak.
+
+- **(a) Found album.** Available. Adds a spine and a final payoff, costs a little D-001
+  friction. Its risk is gimmick, not incoherence — that was my bad argument.
+- **(b) Implicit.** Each story simply faces its plate. Cheaper, no friction. **Still my lean**,
+  on cost rather than on plausibility.
+
+Either is compatible with D-007, whose actual prohibition is on building a premise out of a
+picture's surface. A short unsigned front-matter note is available under both.
 
 ## Tone
 
@@ -105,6 +117,8 @@ Kept current so the collection does not repeat itself.
 | 3 | ti-jean · *The Long Way Round* | the-attitude-of-grief | The Faces Beneath | A figure in a burying ground that nobody can date and everybody walks a little faster past; one young man is not affected by it | door left open | close third | 1905 | edge of frame (no body; two facts) | **final, 4,262 w** |
 | - | georgie | TBD | TBD | A killer keeps a head in the house and names it | TBD | TBD | TBD | TBD | event pool built, not started |
 | - | standing-water | the-wrong-reflection | Reflections | TBD | TBD | TBD | TBD | TBD | not started |
+| - | ship (working) | TBD (four available, § VII) | TBD | TBD | TBD | TBD | TBD, c. 1850-1920 | TBD | question asked, nothing chosen |
+| - | ivey (working) | the-stooping-one | TBD | A house whose upstairs its builder made unusable; something in it that cannot straighten up, and the stoop transmits to whoever goes near. **Second reading (prose-02):** the builder spent ten years being hard to find, in the house and in the parish's books, and his daughter has correctly undone all of it. **Third reading (prose-03, D-007/D-008):** the stoop is not clearance, it is a thing lowering its head to the height of whoever's face is in the room — no fixed cast | TBD | close third | 1903 for the Ivey spine; prose-03 unfixed, one candidate modern | TBD | **four candidate batches, sixty moments, all unscored.** Two competing essences (*it did not fit* vs *it came down to your level*) and the choice is Mark's. prose-04 is the mediated-sighting set: testimony and witnessed reactions, nobody frightened by the thing directly |
 
 **Filled progressively, not up front (L-015).** Stories are grown from vignettes rather
 than outlined, so a row starts as mostly TBD and is completed as the story acquires its

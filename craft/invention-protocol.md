@@ -97,7 +97,17 @@ inside a world that does not exist yet. `craft/vignette-bank.md` is the format o
 Machinery — period, trade, paperwork, wound, the rule off-page — is **derived after
 something lands**, never proposed instead of it.
 
-**0. Generate unfiltered (L-022).** No rule in `craft/` applies at this stage. Do not
+**0. Generate unfiltered (L-022).** No rule in `craft/` applies at this stage.
+
+> **And a rendered candidate is still this stage, not a draft (L-032, 2026-09-15).** L-023 made
+> every candidate a rendered moment, which moved invention into prose and quietly dragged the
+> draft-stage prohibitions along with it. It should not have. Exploration prose keeps the
+> prohibitions by **default** — they are cheap and they constrain failure — but **any of them
+> lifts the moment Mark asks, with no argument and no `deviations.md` entry**, because the prose
+> is the experiment and the rule is what is being tested. D-006 and the merit questions do not
+> lift: a passage that frightens nobody wastes the round whatever rules it kept. The rein-in is
+> a named step at **selection**, not a hope.
+ Do not
 screen a candidate against a prohibition, a prescription, a test, or this document's own
 Part 3 — every one of them describes finished prose or a finished story, and there is
 neither here. Write the candidate you would not defend. Filtering happens at **selection**,
@@ -136,6 +146,55 @@ myself. Two "separate" generations in one context are correlated, my sense of wh
 option is unusual is unreliable, and my randomness is not random. **The mechanical
 steps — Mark choosing, positional selection, external seeds, the exclusion list — do
 the real work.** My self-diversification is a helpful prior, not a control.
+
+**And I cannot score fear.** Added 2026-09-12, from Mark, and it is a second failure and not
+a restatement of the first. The one above is about *novelty* — whether an option is unusual.
+This one is about *effect* — whether a passage frightens anybody. They come apart: the
+scratched-face passages were not modal, not near a spent event, and not on any ban list, and
+they were inert. I had labelled them *eight mechanisms of dread* and *the wrongness* in my own
+notes while writing prose in which no character is ever afraid, which means the error was not
+that I wrote set-up by mistake. **I believed those were the scares.**
+
+**And I cannot read a photograph at all — re-scoped 2026-09-14 by D-007, read that first.**
+The note below diagnosed the scratched-face failure as a bad *motor* inference and prescribed
+reading the marks more carefully instead. Mark's correction the same day goes further and
+kills the activity: the images were generated, their detail is noise rather than authorship,
+and there is no fact of the matter to read well or badly. **A plate supplies a subject and a
+feeling in one clause, and nothing else.** What survives below is the failure pattern — sound
+reasoning from an unsound object, agreeing with the newest doctrine — which is worth keeping
+because it is how this will look the next time. What does not survive is the fix.
+
+**The original note, kept as the record.** Added 2026-09-14, from Mark, and it is a
+third failure with the same shape as the first two. `the-scratched-face.md` counted the marks
+over the face, priced each one as a decision at a needle's pace, and got an hour at a desk —
+from which a trade, a wage and a retoucher followed honestly. Mark looked at the same plate and
+saw five seconds of a hand swinging. He is right: the strokes are arcs, arcs are a wrist pivot,
+and the work runs off the face into the hair and the sky, which is what a hand does when nobody
+is being paid. **Quantity of evidence is not duration of act, and I have nothing in me that
+knows what a hand can do in a second.** So any premise that rests on how long something took is
+an inference to be surfaced, not a fact to build on — and it gets worse when the inference
+happens to agree with the newest thing in the craft folder, because then it will be cited back
+as support for it (L-031).
+
+Mark's articulation of the loop, which is the most accurate description of it anyone has
+written down:
+
+> *"the most important part of this prose writing is that I tell you what's scary. It's
+> almost like you're borrowing my fear in order to navigate through a web of possible prose
+> to write a story."*
+
+Two consequences the pipeline should actually run on:
+
+- **The craft folder is that borrowed fear, cached.** Every rule in `lessons-learned.md` is a
+  compressed record of Mark reacting to something. Writing from the cache without the live
+  signal is how `L-027` happens — the cache is made almost entirely of **prohibitions**, which
+  record where fear *died*, and a document that only knows where fear died cannot tell you
+  where it lives. Rules subtract. They have never once added a scare.
+- **So the scoring step is not optional and cannot be delegated to me.** L-013 already says I
+  do not pick, for novelty reasons. The same structural answer covers fear, for a different
+  reason: generate wide, render **at the scare** (D-006), and let Mark say which one frightened
+  him. My own report on which passage is frightening is worth about as much as my report on
+  which one is original.
 
 ---
 
